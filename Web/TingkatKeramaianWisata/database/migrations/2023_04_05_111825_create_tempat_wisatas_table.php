@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tempat_wisata', function (Blueprint $table) {
             $table->id('id_tempat');
+            $table->string('gambar')->nullable();
             $table->string('nama_tempat');
             $table->string('alamat');
             $table->time('jam_buka');
