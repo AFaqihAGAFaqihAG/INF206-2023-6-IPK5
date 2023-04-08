@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class tempatWisata extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nama_tempat', 'alamat', 'jam_buka', 'jam_tutup', 'jumlah_pengunjung', 'tingkat_keramaian', 'note', 'gambar'];
+
+    public function addGambar($file)
+    {
+        $fileName = time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $fileName);
+        $this->gambar = $fileName;
+        $this->save();
+    }
     /**
      * 
      * Satu tempat wisata memiliki banyak user
