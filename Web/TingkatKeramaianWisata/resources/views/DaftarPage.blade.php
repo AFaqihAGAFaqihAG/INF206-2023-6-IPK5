@@ -23,7 +23,7 @@
                 <button class="btn_submit" type=""> Kembali </button>
                 <button class="btn_submit" type="submit"> Login </button>
               </div>
-              <p>Sudah akun? <a href="register.html">Sign in</a></p>
+              <p>Sudah akun? <a href="login">Sign in</a></p>
               </form>
             </div>
           </div>
