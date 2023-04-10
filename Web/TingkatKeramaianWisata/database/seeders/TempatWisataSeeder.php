@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 use Illuminate\Database\Seeder;
 use App\Models\tempatWisata;
 
@@ -52,6 +52,11 @@ class TempatWisataSeeder extends Seeder
             'jumlah_pengunjung' => 200,
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal' 
-        ]);       
+        ]);     
+        
+        // insert data ke database
+        foreach ($tempatWisata as $tw) {
+            TempatWisata::create($tw);
+        }
     }
 }

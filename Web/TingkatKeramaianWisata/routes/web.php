@@ -14,4 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+Route::get('login', function () {
+    return view('LoginPage');
+});
+
+Route::get('daftar', function () {
+    return view('DaftarPage');
+});
 Route::get('/', [LandingPageController::class, 'index']);
+

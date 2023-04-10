@@ -1,0 +1,79 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+  }
+  
+.bg {
+    /* The image used */
+    background-image: url("website-background.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    }
+
+a{
+	text-decoration: none;
+}
+
+/*registrasi dan login*/
+
+.login_layout{
+    margin: auto;
+    margin-top: 200px;
+    width: 500px;
+}
+
+.daftar_layout{
+    margin: auto;
+    margin-top: 100px;
+    width: 500px;
+}
+
+.login, .daftar{
+    display: grid;
+}
+
+.input_data{
+    display: grid;
+    text-align: center;
+}
+
+.login-teks, .daftar-teks{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.daftar .daftar-teks{
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.input_id, .input_pass{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 40px;
+}
+
+.btn_submit{
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #CEF3FF;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 25px;
+    margin-left: 25px;
+}
