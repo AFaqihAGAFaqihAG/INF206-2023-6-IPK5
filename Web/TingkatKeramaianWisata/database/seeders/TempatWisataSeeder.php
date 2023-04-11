@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Seeder;
 use App\Models\tempatWisata;
 
 class TempatWisataSeeder extends Seeder
@@ -55,8 +54,6 @@ class TempatWisataSeeder extends Seeder
         ]);     
         
         // insert data ke database
-        foreach ($tempatWisata as $tw) {
-            TempatWisata::create($tw);
-        }
+        
     }
 }
