@@ -53,6 +53,5 @@ class TempatWisataSeeder extends Seeder
             'note' => 'tempat dalam keadaan normal' 
         ]);     
         
-        
     }
 }
