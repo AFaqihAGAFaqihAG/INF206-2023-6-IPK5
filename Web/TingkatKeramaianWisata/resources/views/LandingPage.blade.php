@@ -10,12 +10,15 @@
                 background-image: url('images/bg.jpg');
                 background-size: 100% 100%;
             }
-            /* this is also not working for whatever reason
-             .color-gray-dark {
-                color:rgb(80, 80, 80);
-            } */
+            .color-gray-dark {
+                color: rgb(80, 80, 80) !important;
+            }
             .bg-light-blue {
-                background-color: rgb(198, 232, 244);
+                background-color: rgb(198, 232, 244) !important;
+            }
+            .card.hovering:hover{
+                transform: scale(1.03);
+                transition: transform 0.2s ease-in-out;
             }
         </style>
 
@@ -23,12 +26,12 @@
         <!-- somehow not working idk <link rel="stylesheet" href="css/app.css"> -->
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-info bg-opacity-25 p-1">
-            <div class="navbar-brand fw-bold fs-3" style="color: rgb(80, 80, 80);">PARAWISATAKU</div>
+            <div class="fw-bold fs-3 color-gray-dark">PARAWISATAKU</div>
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <button type="button" class="btn fw-bold fs-5 btn-sm" style="color:rgb(80, 80, 80); background-color: rgb(198, 232, 244);">Login</button>
+                            <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
                         </a>
                     </li>
                 </ul>
@@ -43,8 +46,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card border border-dark ">
-                        <div class="card-body text-center bg-light-blue" style="color:rgb(80, 80, 80)">
-                            <p class="card-text fw-bold fs-4">Rekomendasi Tempat Wisata</p>
+                        <div class="card-body text-center bg-light-blue">
+                            <p class="card-text fw-bold fs-4 color-gray-dark">Rekomendasi Tempat Wisata</p>
                         </div>
                     </div>
                 </div>
@@ -57,10 +60,10 @@
                 @foreach($tempatWisata as $t)
                 <div class="col-md-4">
                     <a href="/", style="text-decoration: none;">
-                    <div class="card mb-4">
+                    <div class="card mb-4 hovering">
                         <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}">
                         <div class="card-body bg-light-blue">
-                            <h5 class="text-title text-center fw-bold fs-6" style="color:rgb(80, 80, 80);">
+                            <h5 class="text-title text-center fw-bold fs-6 color-gray-dark">
                                 {{ $t->nama_tempat }}, {{ $t->alamat }}
                             </h5>
                         </div>
