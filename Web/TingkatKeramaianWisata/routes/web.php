@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('LandingPage');
-});
+
 
 Route::get('login', function () {
     return view('LoginPage');
@@ -24,3 +22,5 @@ Route::get('login', function () {
 Route::get('daftar', function () {
     return view('DaftarPage');
 });
+Route::get('/', [LandingPageController::class, 'index']);
+
