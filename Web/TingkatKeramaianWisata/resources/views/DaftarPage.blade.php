@@ -20,10 +20,10 @@
               <input class="input_id" type="tel" placeholder="NOMOR HP">
               <input class="input_pass" type="password" placeholder="PASSWORD">
               <div class="button">
-                <button class="btn_submit" type=""> Kembali </button>
-                <button class="btn_submit" type="submit"> Login </button>
+                <button class="btn_submit" type="onclick"><a href="login"> Kembali </button>
+                <button class="btn_submit" type="submit"> Daftar </button>
               </div>
-              <p>Sudah akun? <a href="register.html">Sign in</a></p>
+              <p>Sudah akun? <a href="login">Sign in</a></p>
               </form>
             </div>
           </div>
