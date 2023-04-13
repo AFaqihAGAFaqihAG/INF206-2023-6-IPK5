@@ -11,14 +11,15 @@
     <div class="bg">
      <div class="login_layout">
           <div class="login">
-            <form>
-            <div class="login-teks">Masukan ID & Password</div>
+          <form action="{{ route('login') }}" method="post">
+              @csrf <!-- Menambahkan token CSRF di dalam form -->
+            <div class="login-teks">Masukan EMAIL & Password</div>
             <div class="input_data">
-              <input class="input_id" type="text" placeholder="ID">
-              <input class="input_pass" type="password" placeholder="PASSWORD">
-              <div class="button">
-                <button class="btn_submit" type="onclick"> <a href="/">Kembali </button>
-                <button class="btn_submit" type="submit"> Login </button>
+              <input class="input_id" type="email" name="email" placeholder="EMAIL">
+              <input class="input_pass" type="password" name="password" placeholder="PASSWORD">
+            <div class="button">
+                <button class="btn_submit" type="button" onclick="window.location.href='/'">Kembali</button>
+                <button class="btn_submit" type="submit">Login</button>
               </div>
               <p>Belum punya akun? <a href="daftar">Sign Up</a></p>
               </form>
