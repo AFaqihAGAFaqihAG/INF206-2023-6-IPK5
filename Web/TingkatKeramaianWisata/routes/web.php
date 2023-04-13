@@ -23,5 +23,8 @@ Route::get('login', function () {
 Route::get('daftar', function () {
     return view('DaftarPage');
 });
+Route::get('pengunjung', function () {
+    return view('PengunjungPage');
+});
 Route::get('/', [LandingPageController::class, 'index']);
 
