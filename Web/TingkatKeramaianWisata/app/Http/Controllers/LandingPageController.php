@@ -10,7 +10,6 @@ class LandingPageController extends Controller
     public function index()
     {
         $tempatWisata = tempatWisata::all();
-        
         return view('LandingPage', compact(['tempatWisata']));
     }
 }

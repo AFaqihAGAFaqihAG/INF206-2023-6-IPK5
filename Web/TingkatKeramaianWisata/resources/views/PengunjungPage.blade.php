@@ -50,7 +50,7 @@
 		</main>
 	
 		<div>
-			<button class="btn-kembali" type="onclick"> <a class="btn_klik" href="/login">Kembali </button>
+			<button class="btn-kembali" type="onclick"> <a class="btn_klik" href="/">Kembali </button>
 		</div>
 	</div>
 	
