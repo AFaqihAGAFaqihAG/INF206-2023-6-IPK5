@@ -1,0 +1,165 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    text-align: center;
+}
+
+body {
+    background-image: url(website-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 150px;
+    display: inline-block;
+    color: #000000;
+}
+
+
+.main {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* .main .search {
+    position: relative;
+    margin: 0 auto;
+    min-width: 85%;
+    height: 53px;
+    background: #D9D9D9;
+}
+
+.main .search input[type="text"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.main input {
+    float: right;
+    width: 167px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: #ffffff;
+} */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    min-width: 85%;
+    height: 53px;
+    background: #D9D9D9;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+    position: absolute;
+    float: right;
+    width: 167px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    right: 0;
+}
+
+.main img {
+    position: absolute;
+    width: 360px;
+    height: 240px;
+    left: 150px;
+    top: 291px;
+}
+
+.main .keterangan {
+    color: #000000;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.main h2 {
+    position: absolute;
+    left: 700px;
+    top: 290px;
+    font-size: 40px;
+
+}
+
+.main .visitor {
+    position: absolute;
+    left: 600px;
+    top: 362px;
+}
+.main .location {
+    position: absolute;
+    left: 600px;
+    top: 411px;
+}
+.main .hours {
+    position: absolute;
+    left: 600px;
+    top: 460px;
+}
+.main .indicator {
+    position: absolute;
+    left: 1050px;
+    top: 362px;
+}
+
+.main h3 {
+    position: absolute;
+    left: 150px;
+    top: 555px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+
+.main .deskripsi-box {
+    position: absolute;
+    left: 150px;
+    top: 600px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 24px;
+    color: #000000;
+}
+
+.btn-kembali {
+    outline: none;
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    left: 85%;
+    top: 720px;
+    border-radius: 20px;
+    background-color: #FFFFEB;
+}
+.btn_klik {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+}
