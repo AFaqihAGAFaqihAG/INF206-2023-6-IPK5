@@ -27,13 +27,20 @@
 			<div>
 				<img src="images/gambarWisata.jpg" alt="Foto">
 			</div>
+			<!-- @foreach($tempatWisata as $t) -->
 			<div class="keterangan">
 				<h2>Nama Tempat Wisata</h2>
 				<p class="visitor">Pengunjung: </p>
 				<p class="location">Lokasi: </p>
 				<p class="hours">Jam Buka/Tutup: </p>
 				<p class="indicator">Indikator: </p>
+				<!-- <h2>{{ $t->nama_tempat }}</h2>
+				<p class="visitor">Pengunjung: {{ $t->jumlah_pengunjung }}</p>
+				<p class="location">Lokasi: {{ $t->alamat }}</p>
+				<p class="hours">Jam Buka/Tutup: {{ $t->jam_buka }} - {{ $t->jam_tutup }}</p>
+				<p class="indicator">Indikator: {{ $t->tingkat_keramaian }}</p> -->
 			</div>
+			<!-- @endforeach -->
 			<div>
 				<h3>Deskripsi:</h3>
 			</div>

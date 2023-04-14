@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\PengunjungPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,5 +27,9 @@ Route::get('daftar', function () {
 Route::get('pengunjung', function () {
     return view('PengunjungPage');
 });
+
 Route::get('/', [LandingPageController::class, 'index']);
+
+//Router::get('/', [PengunjungPageController::class, 'index']);
+
 

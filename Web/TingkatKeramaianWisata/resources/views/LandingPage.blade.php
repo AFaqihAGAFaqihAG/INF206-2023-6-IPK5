@@ -45,7 +45,7 @@
             <div class="row">
                 @foreach($tempatWisata as $t)
                 <div class="col-md-4">
-                    <a href="/">
+                    <a href="{{ url('pengunjung/') }}">
                     <div class="card mb-4">
                         <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}">
                         <div class="card-body">
