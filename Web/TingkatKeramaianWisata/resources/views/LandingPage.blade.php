@@ -36,15 +36,6 @@
                     </li>
                 </ul>
             </div>
-            
-        <nav class="navbar navbar-expand-lg navbar-dark bg-info bg-opacity-25">
-            <a class="navbar-brand fw-bold fs-2" href="#" style="color: rgb(80, 80, 80);">PARAWISATAKU</a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link fw-bold fs-3" href="login", style="color: rgb(80, 80, 80);">Login</a>
-                </li>
-            </ul>
         </div>
         </nav>
 
