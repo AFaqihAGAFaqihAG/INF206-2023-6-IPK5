@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class tempatWisata extends Model
 {
     use HasFactory;
     
     protected $table = "tempat_wisata";
+
     protected $fillable = ['nama_tempat', 'alamat', 'jam_buka', 'jam_tutup', 'jumlah_pengunjung', 'tingkat_keramaian', 'note', 'gambar'];
 
     public function addGambar($file)
@@ -19,6 +21,7 @@ class tempatWisata extends Model
         $this->gambar = $fileName;
         $this->save();
     }
+
     /**
      * 
      * Satu tempat wisata memiliki banyak user
@@ -29,14 +32,13 @@ class tempatWisata extends Model
         return $this->hasMany(User::class);
     }
 
-
     /**
-     * 
      * Satu tempat wisata memiliki banyak macam tiket
      * relasi many to one 
      */
-    public function harga_tiket()
+    public function HargaTiket()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(HargaTiket::class);
     }
 }
+
