@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="login">
                             <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
                         </a>
                     </li>
