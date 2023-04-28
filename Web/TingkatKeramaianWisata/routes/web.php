@@ -3,7 +3,6 @@
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PengunjungPageController;
 use App\Http\Controllers\PengunjungController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +32,8 @@ Route::post('/daftar-petugas', [PetugasController::class, 'daftarPetugas']);
 Route::get('pengunjung', function () {
     return view('PengunjungPage');
 });
+
+Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
+
 Route::get('/', [LandingPageController::class, 'index']);
-
-//Router::get('/', [PengunjungPageController::class, 'index']);
-
 

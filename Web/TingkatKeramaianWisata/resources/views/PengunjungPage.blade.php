@@ -22,7 +22,6 @@
 			<div>
 			<img src="{{ asset('images/' . $tempatWisata->gambar) }}" class="card-img-top" alt="{{ $tempatWisata->gambar }}">
 			</div>
-			<!-- @foreach($tempatWisata as $t) -->
 			<div class="keterangan">
 				<h2>{{ $tempatWisata->nama_tempat }}</h2>
 				<p class="visitor">Pengunjung: {{ $tempatWisata->jumlah_pengunjung }}</p>
@@ -30,7 +29,6 @@
 				<p class="hours">Jam Buka/Tutup: {{ $tempatWisata->jam_buka }} - {{ $tempatWisata->jam_tutup }}</p>
 				<p class="indicator">Indikator: {{ $tempatWisata->tingkat_keramaian }}</p>
 			</div>
-			<!-- @endforeach -->
 			<div>
 				<h3>Deskripsi:</h3>
 			</div>
