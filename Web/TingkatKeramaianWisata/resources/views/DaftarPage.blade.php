@@ -21,7 +21,7 @@
                         <input class="input_id" type="tel" name="nomor_hp" placeholder="NOMOR HP">
                         <input class="input_pass" type="password" name="password" placeholder="PASSWORD">
                         <div class="button">
-                            <a href="login" class="btn_submit">Kembali</a>
+                            <button class="btn_submit" type="button" onclick="window.location.href='login'">Kembali</button>
                             <button type="submit" class="btn_submit">Daftar</button>
                         </div>
                         <p>Sudah punya akun? <a href="login">Sign in</a></p>

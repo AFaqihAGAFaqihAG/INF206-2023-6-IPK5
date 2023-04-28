@@ -38,7 +38,7 @@
 		</main>
 	
 		<div>
-			<button class="btn-kembali"> <a class="btn_klik" href="/">Kembali </a></button>
+			<button class="btn-kembali" type="button" onclick="window.location.href='/'">Kembali</button>
 		</div>
 	</div>
 	
