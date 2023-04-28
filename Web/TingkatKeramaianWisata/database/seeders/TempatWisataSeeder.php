@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\tempatWisata;
+use App\Models\TempatWisata;
 
 class TempatWisataSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class TempatWisataSeeder extends Seeder
      */
     public function run(): void
     {
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_1',
             'gambar' => 'gambar_1.png',
             'alamat' => 'Alamat_Wisata_1',
@@ -22,7 +22,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sepi',
             'note' => 'tempat sedang sepi' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_2',
             'gambar' => 'gambar_2.png',
             'alamat' => 'Alamat_Wisata_2',
@@ -32,7 +32,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_3',
             'gambar' => 'gambar_3.png',
             'alamat' => 'Alamat_Wisata_3',
@@ -42,7 +42,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sepi',
             'note' => 'tempat sedang sepi' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_4',
             'gambar' => 'gambar_4.png',
             'alamat' => 'Alamat_Wisata_4',
@@ -52,7 +52,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal' 
         ]);  
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_1',
             'gambar' => 'gambar_1.png',
             'alamat' => 'Alamat_Wisata_1',
@@ -62,7 +62,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sepi',
             'note' => 'tempat sedang sepi' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_2',
             'gambar' => 'gambar_2.png',
             'alamat' => 'Alamat_Wisata_2',
@@ -72,7 +72,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_3',
             'gambar' => 'gambar_3.png',
             'alamat' => 'Alamat_Wisata_3',
@@ -82,7 +82,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sepi',
             'note' => 'tempat sedang sepi' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_4',
             'gambar' => 'gambar_4.png',
             'alamat' => 'Alamat_Wisata_4',
@@ -92,7 +92,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal' 
         ]);       
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_1',
             'gambar' => 'gambar_1.png',
             'alamat' => 'Alamat_Wisata_1',
@@ -102,7 +102,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sepi',
             'note' => 'tempat sedang sepi' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_2',
             'gambar' => 'gambar_2.png',
             'alamat' => 'Alamat_Wisata_2',
@@ -112,7 +112,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_3',
             'gambar' => 'gambar_3.png',
             'alamat' => 'Alamat_Wisata_3',
@@ -122,7 +122,7 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sepi',
             'note' => 'tempat sedang sepi' 
         ]);
-        tempatWisata::create([
+        TempatWisata::create([
             'nama_tempat' => 'Tempat_Wisata_4',
             'gambar' => 'gambar_4.png',
             'alamat' => 'Alamat_Wisata_4',

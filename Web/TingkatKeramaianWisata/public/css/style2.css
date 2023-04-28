@@ -72,9 +72,9 @@ form {
 }
 
 input[type="text"] {
-    position: absolute;
-    float: right;
-    width: 167px;
+    position: center;
+    float: center;
+    width: 900px;
     height: 30px;
     border-radius: 40px;
     background-color: #ffffff;

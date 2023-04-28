@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\tempatWisata;
+use App\Models\TempatWisata;
 
 class LandingPageController extends Controller
 {
     public function index()
     {
-        $tempatWisata = tempatWisata::all();
+        $tempatWisata = TempatWisata::all();
         return view('LandingPage', compact(['tempatWisata']));
     }
 }
