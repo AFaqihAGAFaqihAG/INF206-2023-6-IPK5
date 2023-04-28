@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class tempatWisata extends Model
+class TempatWisata extends Model
 {
     use HasFactory;
     
