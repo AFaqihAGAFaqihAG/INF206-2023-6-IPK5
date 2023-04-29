@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('gambar')->nullable();
             $table->string('nama_tempat');
             $table->string('alamat');
+            $table->string('status')->default('buka');
             $table->time('jam_buka');
             $table->time('jam_tutup');
             $table->integer('jumlah_pengunjung');

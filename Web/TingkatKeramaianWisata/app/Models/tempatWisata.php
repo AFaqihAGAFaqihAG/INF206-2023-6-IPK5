@@ -12,7 +12,7 @@ class TempatWisata extends Model
     
     protected $table = "tempat_wisata";
 
-    protected $fillable = ['nama_tempat', 'alamat', 'jam_buka', 'jam_tutup', 'jumlah_pengunjung', 'tingkat_keramaian', 'note', 'gambar'];
+    protected $fillable = ['nama_tempat', 'alamat', 'status','jam_buka', 'jam_tutup', 'jumlah_pengunjung', 'tingkat_keramaian', 'note', 'gambar'];
 
     public function addGambar($file)
     {
