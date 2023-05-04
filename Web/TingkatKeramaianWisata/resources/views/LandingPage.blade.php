@@ -62,7 +62,7 @@
                 <div class="col-md-4">
                 <a href="{{ url('pengunjung', ['id_tempat' => $t->id_tempat]) }}">
                     <div class="card mb-4">
-                        <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}">
+                        <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}" height="200px">
                         <div class="card-body bg-light-blue">
                             <h5 class="text-title text-center fw-bold fs-6 color-gray-dark">
                                 <P>{{ $t->nama_tempat }}</P>

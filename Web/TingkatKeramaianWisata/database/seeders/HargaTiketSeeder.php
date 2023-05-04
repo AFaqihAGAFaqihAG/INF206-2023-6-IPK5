@@ -75,6 +75,18 @@ class HargaTiketSeeder extends Seeder
                 'harga' => 110000,
                 'sisa_jumlah' => 45,
             ],
+            [
+                'id_tempat_wisata' => 6,
+                'jenis_tiket' => 'Reguler',
+                'harga' => 55000,
+                'sisa_jumlah' => 90,
+            ],
+            [
+                'id_tempat_wisata' => 6,
+                'jenis_tiket' => 'VIP',
+                'harga' => 110000,
+                'sisa_jumlah' => 45,
+            ],
         ];
 
         // Insert data harga tiket ke tabel harga_tiket
