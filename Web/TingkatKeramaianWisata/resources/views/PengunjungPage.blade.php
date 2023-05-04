@@ -26,6 +26,7 @@
 				<h2>{{ $tempatWisata->nama_tempat }}</h2>
 				<p class="visitor">Pengunjung: {{ $tempatWisata->jumlah_pengunjung }}</p>
 				<p class="location">Lokasi: {{ $tempatWisata->alamat }}</p>
+				<p class="status">Status: {{$tempatWisata -> status}}</p>
 				<p class="hours">Jam Buka/Tutup: {{ $tempatWisata->jam_buka }} - {{ $tempatWisata->jam_tutup }}</p>
 				<p class="indicator">Indikator: {{ $tempatWisata->tingkat_keramaian }}</p>
 			</div>

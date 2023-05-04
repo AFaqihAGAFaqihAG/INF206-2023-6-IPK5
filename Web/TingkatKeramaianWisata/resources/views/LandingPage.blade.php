@@ -65,7 +65,8 @@
                         <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}">
                         <div class="card-body bg-light-blue">
                             <h5 class="text-title text-center fw-bold fs-6 color-gray-dark">
-                                {{ $t->nama_tempat }}, {{ $t->alamat }}
+                                <P>{{ $t->nama_tempat }}</P>
+                                <P>{{ $t->alamat }}</P>
                             </h5>
                         </div>
                     </div>

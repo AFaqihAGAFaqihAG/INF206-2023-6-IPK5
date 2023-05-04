@@ -125,6 +125,12 @@ input[type="text"] {
     top: 362px;
 }
 
+.main .status {
+    position: absolute;
+    left: 600px;
+    top: 500px;
+}
+
 .main h3 {
     position: absolute;
     left: 150px;
