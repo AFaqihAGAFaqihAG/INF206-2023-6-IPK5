@@ -23,16 +23,23 @@
                     <tr>
                         <th>Jenis Tiket</th>
                         <th>Harga</th>
+                        <th>sisa</th>
                     </tr>
                 </thead>
                 <tbody>
+                @if($hargaTiket -> isEmpty())
+                <tr>
+                    <td colspan="3">Belum ada data harga tiket untuk tempat wisata ini.</td>
+                </tr>
+                    @else
                     @foreach ($hargaTiket as $tiket)
                         <tr>
                             <td>{{ $tiket->jenis_tiket }}</td>
                             <td>{{ $tiket->harga }}</td>
+                            <td>{{ $tiket->sisa_jumlah}}
                         </tr>
                     @endforeach
-                </tbody>
+                @endif
             </table>
         </div>
 
