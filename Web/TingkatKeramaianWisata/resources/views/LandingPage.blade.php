@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="login">
                             <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
                         </a>
                     </li>
@@ -60,12 +60,13 @@
             <div class="row">
                 @foreach($tempatWisata as $t)
                 <div class="col-md-4">
-                    <a href="pengunjung">
+                <a href="{{ url('pengunjung', ['id_tempat' => $t->id_tempat]) }}">
                     <div class="card mb-4">
-                        <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}">
+                        <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}" height="200px">
                         <div class="card-body bg-light-blue">
                             <h5 class="text-title text-center fw-bold fs-6 color-gray-dark">
-                                {{ $t->nama_tempat }}, {{ $t->alamat }}
+                                <P>{{ $t->nama_tempat }}</P>
+                                <P>{{ $t->alamat }}</P>
                             </h5>
                         </div>
                     </div>

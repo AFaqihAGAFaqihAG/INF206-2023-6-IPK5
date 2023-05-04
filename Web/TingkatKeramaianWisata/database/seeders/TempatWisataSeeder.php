@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\tempatWisata;
+use App\Models\TempatWisata;
 
 class TempatWisataSeeder extends Seeder
 {
@@ -12,125 +12,65 @@ class TempatWisataSeeder extends Seeder
      */
     public function run(): void
     {
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_1',
+        TempatWisata::create([
+            'nama_tempat' => 'Museum Tsunami Aceh',
             'gambar' => 'gambar_1.png',
-            'alamat' => 'Alamat_Wisata_1',
-            'jam_buka' => '10:00:00',
-            'jam_tutup' => '22:00:00',
-            'jumlah_pengunjung' => 100,
+            'alamat' => 'Kec. Baiturrahman Banda Aceh',
+            'jam_buka' => '09:00:00',
+            'jam_tutup' => '16:00:00',
+            'jumlah_pengunjung' => 50,
             'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi' 
+            'note' => 'Jika Anda mencari tempat untuk bersantai dan menikmati waktu sendiri, maka saat ini mungkin adalah waktu yang tepat untuk mengunjungi tempat wisata yang sedang sepi. Dengan sedikit atau bahkan tanpa kerumunan orang, pengunjung dapat menikmati keindahan dan kenyamanan tempat wisata dengan lebih tenang dan santai.' 
         ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_2',
+        TempatWisata::create([
+            'nama_tempat' => 'Museum Aceh',
             'gambar' => 'gambar_2.png',
-            'alamat' => 'Alamat_Wisata_2',
-            'jam_buka' => '12:00:00',
-            'jam_tutup' => '20:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal' 
+            'alamat' => 'Kec. Baiturrahman, Banda Aceh',
+            'jam_buka' => '08:30:00',
+            'jam_tutup' => '16:15:00',
+            'jumlah_pengunjung' => 30,
+            'tingkat_keramaian' => 'sepi',
+            'note' => 'Jika Anda mencari tempat untuk bersantai dan menikmati waktu sendiri, maka saat ini mungkin adalah waktu yang tepat untuk mengunjungi tempat wisata yang sedang sepi. Dengan sedikit atau bahkan tanpa kerumunan orang, pengunjung dapat menikmati keindahan dan kenyamanan tempat wisata dengan lebih tenang dan santai.' 
         ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_3',
+        TempatWisata::create([
+            'nama_tempat' => 'Pantai Ulee Lheue',
             'gambar' => 'gambar_3.png',
-            'alamat' => 'Alamat_Wisata_3',
-            'jam_buka' => '10:00:00',
-            'jam_tutup' => '22:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_4',
+            'alamat' => 'Kec. Meuraxa, Banda Aceh',
+            'jam_buka' => '06:00:00',
+            'jam_tutup' => '18:00:00',
+            'jumlah_pengunjung' => 200,
+            'tingkat_keramaian' => 'padat',
+            'note' => 'Jika Anda sedang mencari tempat wisata yang penuh dengan keramaian dan aktivitas, maka mungkin tempat wisata yang sedang padat adalah pilihan yang tepat untuk Anda. Di tempat seperti ini, Anda akan menemukan banyak pengunjung yang memadati area wisata. Namun jika anda tidak menyukai keramaian berlebih, maka tidak disarankan untuk anda pergi ke tempat wisata ini.' 
+        ]);   
+        TempatWisata::create([
+            'nama_tempat' => 'Rumah Cut Nyak Dien',
             'gambar' => 'gambar_4.png',
-            'alamat' => 'Alamat_Wisata_4',
-            'jam_buka' => '12:00:00',
-            'jam_tutup' => '20:00:00',
-            'jumlah_pengunjung' => 200,
+            'alamat' => 'Kec. Peukan Bada, Aceh Besar',
+            'jam_buka' => '09:00:00',
+            'jam_tutup' => '17:00:00',
+            'jumlah_pengunjung' => 25,
             'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal' 
-        ]);  
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_1',
-            'gambar' => 'gambar_1.png',
-            'alamat' => 'Alamat_Wisata_1',
-            'jam_buka' => '10:00:00',
-            'jam_tutup' => '22:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_2',
-            'gambar' => 'gambar_2.png',
-            'alamat' => 'Alamat_Wisata_2',
-            'jam_buka' => '12:00:00',
-            'jam_tutup' => '20:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_3',
-            'gambar' => 'gambar_3.png',
-            'alamat' => 'Alamat_Wisata_3',
-            'jam_buka' => '10:00:00',
-            'jam_tutup' => '22:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_4',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Alamat_Wisata_4',
-            'jam_buka' => '12:00:00',
-            'jam_tutup' => '20:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal' 
-        ]);       
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_1',
-            'gambar' => 'gambar_1.png',
-            'alamat' => 'Alamat_Wisata_1',
-            'jam_buka' => '10:00:00',
-            'jam_tutup' => '22:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_2',
-            'gambar' => 'gambar_2.png',
-            'alamat' => 'Alamat_Wisata_2',
-            'jam_buka' => '12:00:00',
-            'jam_tutup' => '20:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_3',
-            'gambar' => 'gambar_3.png',
-            'alamat' => 'Alamat_Wisata_3',
-            'jam_buka' => '10:00:00',
-            'jam_tutup' => '22:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi' 
-        ]);
-        tempatWisata::create([
-            'nama_tempat' => 'Tempat_Wisata_4',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Alamat_Wisata_4',
-            'jam_buka' => '12:00:00',
-            'jam_tutup' => '20:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal' 
+            'note' => 'Tempat wisata saat ini berada dalam keadaan normal, artinya tempat tersebut tidak terlalu ramai dan tidak terlalu sepi. Anda tetap dapat menikmati keadaan tempat wisata secara tenang dan tidak perlu mengantri terlalu lama untuk menikmati fasilitas didalamnya.' 
         ]);     
+        TempatWisata::create([
+            'nama_tempat' => 'Museum PLTD Apung',
+            'gambar' => 'gambar_5.png',
+            'alamat' => 'Kec. Jaya Baru, Banda Aceh',
+            'jam_buka' => '09:00:00',
+            'jam_tutup' => '17:30:00',
+            'jumlah_pengunjung' => 200,
+            'tingkat_keramaian' => 'padat',
+            'note' => 'Jika Anda sedang mencari tempat wisata yang penuh dengan keramaian dan aktivitas, maka mungkin tempat wisata yang sedang padat adalah pilihan yang tepat untuk Anda. Di tempat seperti ini, Anda akan menemukan banyak pengunjung yang memadati area wisata. Namun jika anda tidak menyukai keramaian berlebih, maka tidak disarankan untuk anda pergi ke tempat wisata ini.' 
+        ]);     
+        TempatWisata::create([
+            'nama_tempat' => 'Pantai Lampuuk',
+            'gambar' => 'gambar_6.png',
+            'alamat' => 'Kec. Lhoknga, Aceh Besar',
+            'jam_buka' => '08:00:00',
+            'jam_tutup' => '18:30:00',
+            'jumlah_pengunjung' => 400,
+            'tingkat_keramaian' => 'padat',
+            'note' => 'Jika Anda sedang mencari tempat wisata yang penuh dengan keramaian dan aktivitas, maka mungkin tempat wisata yang sedang padat adalah pilihan yang tepat untuk Anda. Di tempat seperti ini, Anda akan menemukan banyak pengunjung yang memadati area wisata. Namun jika anda tidak menyukai keramaian berlebih, maka tidak disarankan untuk anda pergi ke tempat wisata ini.' 
+        ]);      
     }
 }
