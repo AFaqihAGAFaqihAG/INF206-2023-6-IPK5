@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\Model;
 class TempatWisata extends Model
 {
     use HasFactory;
-    
+
     protected $table = "tempat_wisata";
 
-    protected $fillable = ['nama_tempat', 'alamat', 'status','jam_buka', 'jam_tutup', 'jumlah_pengunjung', 'tingkat_keramaian', 'note', 'gambar'];
+    protected $fillable = ['nama_tempat', 'alamat', 'status', 'jam_buka', 'jam_tutup', 'jumlah_pengunjung', 'tingkat_keramaian', 'note', 'gambar'];
 
     public function addGambar($file)
     {
@@ -36,9 +36,11 @@ class TempatWisata extends Model
      * Satu tempat wisata memiliki banyak macam tiket
      * relasi many to one 
      */
+
+     protected $primaryKey = 'id_tempat';
     public function HargaTiket()
     {
-        return $this->hasMany(HargaTiket::class);
+        return $this->hasMany(HargaTiket::class, 'id_tempat');
     }
-}
 
+}

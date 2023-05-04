@@ -13,6 +13,6 @@ class HargaTiket extends Model
 
     public function tempatWisata()
     {
-        return $this->belongsTo(TempatWisata::class, 'id_tempat');
+        return $this->belongsTo(TempatWisata::class, 'id_tempat_wisata');
     }
 }
