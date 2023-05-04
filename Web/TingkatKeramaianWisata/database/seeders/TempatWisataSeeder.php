@@ -182,15 +182,5 @@ class TempatWisataSeeder extends Seeder
             'tingkat_keramaian' => 'sedang',
             'note' => 'tempat dalam keadaan normal'
         ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Taman Nasional Tanjung Puting',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Jl. Tanjung Harapan No.1, Kumai Hilir,Kotawaringin Barat, Kalimantan Tengah',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
     }
 }
