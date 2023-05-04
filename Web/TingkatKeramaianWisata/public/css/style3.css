@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+body {
+    background-image: url(website-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.main img {
+    position: absolute;
+    width: 360px;
+    height: 240px;
+    left: 150px;
+    top: 291px;
+}
+
+.main .keterangan {
+    color: #000000;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.main .indicatorPenuh {
+    position: absolute;
+    left: 600px;
+    top: 330px;
+    color: red;
+}
+
+.main .indicatorRamai {
+    position: absolute;
+    left: 700px;
+    top: 330px;
+    color: yellow;
+}
+
+.main .indicatorNormal {
+    position: absolute;
+    left: 800px;
+    top: 330px;
+    color: green;
+}
+
+.main .indicatorSepi {
+    position: absolute;
+    left: 920px;
+    top: 330px;
+    color: white;
+}
+
+.main .name {
+    position: absolute;
+    left: 600px;
+    top: 370px;
+}
+.main .location {
+    position: absolute;
+    left: 600px;
+    top: 410px;
+}
+.main .hours {
+    position: absolute;
+    left: 600px;
+    top: 450px;
+}
+
+
+.main h3 {
+    position: absolute;
+    left: 150px;
+    top: 555px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+
+.main .deskripsi-box {
+    position: absolute;
+    left: 150px;
+    top: 600px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 30px;
+    color: #000000;
+}
+
+.btn-edit {
+    outline: none;
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    left: 75%;
+    top: 720px;
+    border-radius: 20px;
+    background-color: #3cbbd1;
+}
+
+
+.btn-logout {
+    outline: none;
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    left: 85%;
+    top: 720px;
+    border-radius: 20px;
+    background-color: #3cbbd1;
+}
+
+.btn_klik {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+}
