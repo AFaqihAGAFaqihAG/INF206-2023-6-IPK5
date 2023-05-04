@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PengunjungController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +22,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('login', function () {
     return view('LoginPage');
 });
+Route::post('/Login', [LoginController::class, 'login'])->name('login');
 
 Route::get('daftar', function () {
     return view('DaftarPage');
 });
+Route::post('/daftar-petugas', [PetugasController::class, 'daftarPetugas']);
+
+Route::get('pengunjung', function () {
+    return view('PengunjungPage');
+});
+
+Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
+
 Route::get('/', [LandingPageController::class, 'index']);
 
