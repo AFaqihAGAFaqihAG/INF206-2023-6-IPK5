@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PARAWISATAKU</title>
-    <link rel="stylesheet" href="style3.css">
+	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
 </head>
 <body>
 	<div class="background">
@@ -32,7 +32,7 @@
 	
 		<div>
 			<button class="btn-edit" type="onclick"> <a class="btn_klik" href="/Edit">Edit </button>
-			<button class="btn-logout" type="onclick"> <a class="btn_klik" href="/Logout">Logout </button>
+			<button class="btn-logout" type="onclick"> <a class="btn_klik" href="/">Logout </button>
 		</div>
 	</div>
 	

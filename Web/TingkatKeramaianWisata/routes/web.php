@@ -34,9 +34,14 @@ Route::get('pengunjung', function () {
     return view('PengunjungPage');
 });
 
+
 Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
 
 Route::get('/tempat-wisata/{id}/harga-tiket', [HargaTiketController::class, 'index'])->name('harga-tiket');
 
 Route::get('/', [LandingPageController::class, 'index']);
 
+
+Route::get('/tampilanPetugas', function () {
+    return view('PageTampilanPetugas');
+});

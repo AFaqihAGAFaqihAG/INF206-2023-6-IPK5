@@ -146,6 +146,7 @@ input[type="text"] {
     position: absolute;
     left: 150px;
     top: 600px;
+    right:150px;
     font-family: 'Roboto';
     font-style: normal;
     font-size: 24px;
