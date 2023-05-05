@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PARAWISATAKU</title>
+	<title>PARAWISATAKU - Petugas</title>
 	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
 </head>
-<body>
+<body>     
+	<header class="header">	
+		<h1>PARIWISATAKU.COM</h1>
+		<!-- if user is logged in, show user name -->
+        @auth
+			<p>{{ Auth::user()->name }}</p>
+         @else
+            Petugas
+        @endauth  	
+		<hr>
+	</header> 
+	
 	<div class="background">
 		<main class="main">	
 			<div>
