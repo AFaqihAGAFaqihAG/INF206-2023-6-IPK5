@@ -45,3 +45,7 @@ Route::get('/', [LandingPageController::class, 'index']);
 Route::get('/tampilanPetugas', function () {
     return view('PageTampilanPetugas');
 });
+
+Route::get('/petugas/{id_tempat}', [PetugasController::class, 'show'])
+    ->name('petugas.show')
+    ->middleware('auth');
