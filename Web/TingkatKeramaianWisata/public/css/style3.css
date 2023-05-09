@@ -155,6 +155,7 @@ body {
     outline: none;
     position: absolute;
     width: 150px;
+    height: 50px;
     padding: 10px;
     left: 85%;
     top: 720px;

@@ -12,7 +12,7 @@
     <h1>PARIWISATAKU.COM</h1>
     <!-- if user is logged in, show user name -->
     @auth
-        <p>{{ Auth::user()->name }}</p>
+        <p><a href="/">{{ Auth::user()->name }}</p>
     @else
         Petugas
     @endauth   
@@ -43,7 +43,10 @@
 
     <div>
         <button class="btn-edit" type="onclick"> <a class="btn_klik" href="/Edit">Edit </button>
-        <button class="btn-logout" type="onclick"> <a class="btn_klik" href="/">Logout </button>
+        <form method="post" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="btn-logout">Logout</button>    
+        </form>
     </div>
 </div>
 </body>
