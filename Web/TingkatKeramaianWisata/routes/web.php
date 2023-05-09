@@ -24,6 +24,7 @@ Route::get('login', function () {
     return view('LoginPage');
 });
 Route::post('/Login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('daftar', function () {
     return view('DaftarPage');
