@@ -44,4 +44,9 @@ class TempatWisata extends Model
         return $this->hasMany(HargaTiket::class, 'id_tempat');
     }
 
+    public function review()
+    {
+        return $this->hasMany(Review::class, 'id_tempat');
+    }
+
 }
