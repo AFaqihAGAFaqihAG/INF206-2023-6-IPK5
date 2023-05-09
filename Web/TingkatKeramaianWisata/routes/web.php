@@ -5,6 +5,7 @@ use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengunjungController;
 use App\Http\Controllers\HargaTiketController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::get('login', function () {
     return view('LoginPage');
 });
 Route::post('/Login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('daftar', function () {
     return view('DaftarPage');
@@ -37,6 +39,9 @@ Route::get('pengunjung', function () {
 
 Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
 
+Route::post('/review-post',[PengunjungController::class, 'postReview']);
+
+
 Route::get('/tempat-wisata/{id}/harga-tiket', [HargaTiketController::class, 'index'])->name('harga-tiket');
 
 Route::get('/', [LandingPageController::class, 'index']);
@@ -45,3 +50,7 @@ Route::get('/', [LandingPageController::class, 'index']);
 Route::get('/tampilanPetugas', function () {
     return view('PageTampilanPetugas');
 });
+
+Route::get('/petugas/{id_tempat}', [PetugasController::class, 'show'])
+    ->name('petugas.show')
+    ->middleware('auth');

@@ -29,11 +29,19 @@
             <div class="fw-bold fs-3 color-gray-dark">PARAWISATAKU</div>
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="login">
-                            <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
-                        </a>
-                    </li>
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('petugas.show', ['id_tempat' => Auth::user()->id_tempat_wisata]) }}">
+                        <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">{{ Auth::user()->name }}</button>
+                    </a>
+                </li>
+            @else
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">
+                    <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
+                </a>
+            </li>
+            @endauth
                 </ul>
             </div>
         </div>
