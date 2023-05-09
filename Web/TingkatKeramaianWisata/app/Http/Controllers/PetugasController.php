@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User; // Import model User untuk mengakses tabel users pada database
 use Illuminate\Support\Facades\Session; // Import facade Session untuk mengakses session pada Laravel
+use Illuminate\Support\Facades\DB;
 
 class PetugasController extends Controller
 {
@@ -38,4 +39,18 @@ class PetugasController extends Controller
         // Redirect ke halaman login
         return redirect('/login');
     }
+
+    public function show($id_tempat)
+    {
+        $tempatWisata = DB::table('tempat_wisata')
+            ->where('id_tempat', '=', $id_tempat)
+            ->first();
+
+        if (!$tempatWisata) {
+            return redirect()->route('login')->withErrors(['email' => 'Anda tidak memiliki akses ke halaman tersebut']);
+        }
+
+        return view('PageTampilanPetugas', ['tempatWisata' => $tempatWisata]);
+    }
+
 }
