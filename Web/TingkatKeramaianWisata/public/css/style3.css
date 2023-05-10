@@ -150,6 +150,16 @@ body {
     background-color: #3cbbd1;
 }
 
+.btn-harga {
+    outline: none;
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    left: 65%;
+    top: 720px;
+    border-radius: 20px;
+    background-color: #3cbbd1;
+}
 
 .btn-logout {
     outline: none;
