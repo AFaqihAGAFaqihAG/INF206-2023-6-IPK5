@@ -43,6 +43,7 @@
 
     <div>
         <button class="btn-edit" type="onclick"> <a class="btn_klik" href="/Edit">Edit </button>
+        <button class="btn-harga" type="onclick"> <a class="btn_klik" href="/edit-harga">Edit Harga </button>
         <form method="post" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="btn-logout">Logout</button>    

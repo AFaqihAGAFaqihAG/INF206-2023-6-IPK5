@@ -187,8 +187,8 @@ deskripsi-box h3 {
     position: absolute;
     width: 150px;
     padding: 10px;
-    left: 85%;
-    top: 720px;
+    left: 90%;
+    top: 800px;
     border-radius: 20px;
     background-color: #FFFFEB;
 }
@@ -198,8 +198,8 @@ deskripsi-box h3 {
     position: absolute;
     width: 150px;
     padding: 10px;
-    right: 80%;
-    top: 720px;
+    left: 90%;
+    top: 750px;
     border-radius: 20px;
     background-color: #FFFFEB;
 }
