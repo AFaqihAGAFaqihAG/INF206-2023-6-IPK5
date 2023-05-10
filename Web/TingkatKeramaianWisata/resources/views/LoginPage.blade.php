@@ -19,7 +19,7 @@
               <input class="input_pass" type="password" name="password" placeholder="PASSWORD">
             <div class="button">
                 <button class="btn_submit" type="button" onclick="window.location.href='/'">Kembali</button>
-                <button class="btn_submit" type="submit" onclick="window.location.href='/tampilPetugas'">Login</button>
+                <button class="btn_submit" type="submit">Login</button>
               </div>
               <p>Belum punya akun? <a href="daftar">Sign Up</a></p>
               </form>

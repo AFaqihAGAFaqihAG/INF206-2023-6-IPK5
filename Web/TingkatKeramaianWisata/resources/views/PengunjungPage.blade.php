@@ -75,7 +75,7 @@
             </div>
         </div>
 	</div>
-		<!--
+
 		<div>
 		<button class="btn-tiket" type="button" onclick="window.location.href='{{ route('harga-tiket', ['id' => $tempatWisata->id_tempat]) }}'">Harga Tiket</button>
 	</div>
@@ -83,6 +83,5 @@
 			<button class="btn-kembali" type="button" onclick="window.location.href='/'">Kembali</button>
 		</div>
 	</div>
-	-->
 </body>
 </html>

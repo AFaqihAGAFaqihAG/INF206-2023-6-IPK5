@@ -36,9 +36,9 @@
                     </a>
                 </li>
             @else
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">
-                    <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
+            <li class="nav-item"> 
+                <a class="nav-link" href="login">
+                     <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-light-blue">Login</button>
                 </a>
             </li>
             @endauth
