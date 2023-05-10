@@ -10,18 +10,18 @@
 <body>
 	<div class="background">
 		<header class="header">
-			<a href="/"><h1>PARIWISATAKU.COM</h1></a>
+			<a href="/"><h1 style="font-weight: bold;">PARIWISATAKU</h1></a>
 		</header>
-		
+
+		<div class="search">
+            <div class="search-container">
+                <form action="#" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                </form>
+            </div>
+        </div>
+
 		<div class="pengunjung_layout">
-			<!--bagian atas-->
-			<div class="tempatWisata_atas">
-				<div class="search-container">
-					<form action="#" method="get">
-					<input type="text" placeholder="Search..." name="search">
-					</form>
-				</div>
-			</div>
 			<!--informasi tempatWisata-->
 			<div class="tempatWisata_isi">
 				<div class="tempatWisata_gambar">
@@ -41,7 +41,7 @@
 			<!--deskripsi-->
 			<div class="deskripsi-box">
 				<h3>Deskripsi:</h3>
-				<p class="deskripsi">{{ $tempatWisata->note }}</p>
+				<p>{{ $tempatWisata->note }}</p>
 			</div>
 			<!--Review-->
 			<div class="review_layout">
@@ -63,13 +63,14 @@
                 </form>
             </div>
             <div style="margin-top: 30px;"><H3>Review</H3></div>
-            <hr>
+            <hr style="margin-bottom:5px;">
             <div class="review_tempatWisata">
 				@foreach($reviews as $review)
 					@if($review->id_tempat_wisata == $tempatWisata->id_tempat)
-						<h2>{{ $review->R_nama }}</h2>
-						<p>Created at: {{ $review->created_at->format('d M Y H:i:s') }}</p>
-						<p>{{ $review->isi_review }}</p>
+						<div class="reviews">
+							<h3>{{ $review->R_nama }}<span style="color:gray;font-size:12px;">  | Created at: {{ $review->created_at->format('d M Y H:i:s') }}</span></h3>
+							<p>"{{ $review->isi_review }}"</p>
+						</div>
 					@endif
 				@endforeach
             </div>
@@ -85,3 +86,4 @@
 	</div>
 </body>
 </html>
+

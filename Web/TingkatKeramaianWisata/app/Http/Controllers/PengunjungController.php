@@ -27,7 +27,7 @@ class PengunjungController extends Controller
 
         $request->validate([
             'R_nama' => 'required|string|max:30',
-            'isi_review' => 'required|string|max:255'
+            'isi_review' => 'required|string|max:500'
         ]);
         
         $review = new Review;
