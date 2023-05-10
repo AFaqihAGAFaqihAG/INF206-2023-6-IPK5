@@ -42,8 +42,9 @@
     </main>
 
     <div>
-        <button class="btn-edit" type="onclick"> <a class="btn_klik" href="/Edit">Edit </button>
-        <button class="btn-harga" type="onclick"> <a class="btn_klik" href="/edit-harga">Edit Harga </button>
+        <button class="btn-edit" type="onclick"> <a class="btn_klik" href="#">Edit </button>
+        <button class="btn-harga" onclick="location.href='{{ route('EditHarga', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Edit Harga Tiket</button>
+
         <form method="post" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="btn-logout">Logout</button>    
