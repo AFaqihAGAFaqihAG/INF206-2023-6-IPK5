@@ -66,3 +66,4 @@ Route::put('/petugas/{id_tempat}/editharga/{id_harga_tiket}', [HargaTiketControl
 Route::delete('/petugas/{id_tempat}/editharga/{id_harga_tiket}', [HargaTiketController::class, 'destroy'])
     ->name('EditHarga.destroy');
 Route::post('/petugas/{id_tempat}/editharga', [HargaTiketController::class, 'store'])->name('EditHarga.store')->middleware('auth');
+Route::post('/tempat-wisata/{id_tempat}/harga-tiket/{id_harga_tiket}/confirm', [HargaTiketController::class, 'confirm'])->name('harga-tiket.confirm');

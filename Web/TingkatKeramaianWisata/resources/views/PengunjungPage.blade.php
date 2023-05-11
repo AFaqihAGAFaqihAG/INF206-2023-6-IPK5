@@ -49,7 +49,7 @@
 				<p>{{ $tempatWisata->note }}</p>
 			</div>
 		</div>
-
+		
 		<div class="table-container">
             <table>
                 <thead>
