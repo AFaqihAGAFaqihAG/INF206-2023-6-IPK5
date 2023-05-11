@@ -62,11 +62,11 @@
                                     <button type="submit" class="btn btn-light btn-sm">Simpan</button>
                                 </form>
                                 </div>
-                                <!-- <form id="form-hapus-harga-{{ $tiket->id_harga_tiket }}" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
+                                <form id="form-hapus-harga-{{ $tiket->id_harga_tiket }}" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-light" type="submit" onclick="hapusHargaTiket({{ $tiket->id_harga_tiket }})">Hapus</button>
-                                </form> -->
+                                    <button class="btn btn-danger btn-sm" type="submit" onclick="hapusHargaTiket({{ $tiket->id_harga_tiket }})">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
@@ -74,7 +74,43 @@
             </tbody>
         </table>
 
-        <button class="btn btn-light btn-sm" onclick="location.href='{{ route('petugas.show', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Kembali</button>
+        <div class="form-container">
+            <h4 class="text-center" style="font-weight: bold;">Tambah Harga Tiket</h4>
+            <form id="form-tambah-harga" method="POST" action="{{ route('EditHarga.store', ['id_tempat' => $tempatWisata->id_tempat]) }}">
+                @csrf
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Jenis Tiket</th>
+                            <th scope="col" class="text-center">Harga Tiket</th>
+                            <th scope="col" class="text-center">Sisa Jumlah</th>
+                            <th scope="col" class="text-center">Tambah Tiket</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <input type="hidden" name="id_tempat_wisata" value="{{ $tempatWisata->id_tempat }}">
+                            <td class="text-center">
+                                <input class="text-center" type="text" id="jenis-tiket" name="jenis_tiket" required>
+                            </td>
+                            <td class="text-center">
+                                <input type="text" id="harga" name="harga" required>
+                            </td>
+                            <td class="text-center">
+                                <input type="number" id="sisa-jumlah" name="sisa_jumlah" required>
+                            </td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-light btn-sm">Tambah</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn btn-light btn-sm" onclick="location.href='{{ route('petugas.show', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Kembali</button>
+            </form>
+        </div>
+
+        
     </div>
     <!-- <div class="content">
         <h2 class="main-title">Harga Tiket {{ $tempatWisata->nama_tempat }}</h2>
