@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User; // Import model User untuk mengakses tabel users pada database
 use Illuminate\Support\Facades\Session; // Import facade Session untuk mengakses session pada Laravel
 use Illuminate\Support\Facades\DB;
+use App\Models\TempatWisata;
 
 class PetugasController extends Controller
 {
@@ -51,6 +52,30 @@ class PetugasController extends Controller
         }
 
         return view('PageTampilanPetugas', ['tempatWisata' => $tempatWisata]);
+    }
+
+    public function editPetugas($id_tempat)
+    {
+        $tempatWisata = TempatWisata::findOrFail($id_tempat);
+
+        $tempatWisata = DB::table('tempat_wisata')
+        ->where('id_tempat', '=', $id_tempat)
+        ->first();
+        return view('editpetugas', ['tempatWisata' => $tempatWisata]);
+    }
+
+
+    public function update(Request $request, $id_tempat)
+    {
+        $tempatWisata = TempatWisata::findOrFail($id_tempat);
+        $tempatWisata->tingkat_keramaian = $request->tingkat_keramaian;
+        $tempatWisata->note = $request->note;
+        $tempatWisata->jam_buka = $request->jam_buka;
+        $tempatWisata->jam_tutup = $request->jam_tutup;
+        $tempatWisata->status = $request->status;
+        $tempatWisata->jumlah_pengunjung = $request->jumlah_pengunjung;
+        $tempatWisata->save();
+        return redirect()->route('petugas.show', $id_tempat);
     }
 
 }
