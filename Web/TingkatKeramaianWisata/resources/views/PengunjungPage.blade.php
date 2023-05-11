@@ -17,7 +17,7 @@
 
 		<div class="search">
             <div class="search-container">
-                <form action="#" method="get">
+                <form action="/search">
                 <input type="text" placeholder="Search..." name="search">
                 </form>
             </div>

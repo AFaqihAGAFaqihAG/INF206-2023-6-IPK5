@@ -45,6 +45,8 @@ Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
 
 Route::post('/review-post', [PengunjungController::class, 'postReview']);
 
+Route::get('/search', [LandingPageController::class, 'search']);
+
 Route::get('/', [LandingPageController::class, 'index']);
 
 Route::get('/tampilanPetugas', function () {
