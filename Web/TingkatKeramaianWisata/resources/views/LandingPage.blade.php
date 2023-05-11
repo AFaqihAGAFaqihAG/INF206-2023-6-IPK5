@@ -93,7 +93,7 @@
                 @foreach($tempatWisata as $t)
                 <div class="col-md-4">
                 <a href="{{ url('pengunjung', ['id_tempat' => $t->id_tempat]) }}">
-                    <div class="card mb-4" style=" box-shadow: 1px 1px 1px 1px lightgray;">
+                    <div class="card mb-4 hovering" style=" box-shadow: 1px 1px 1px 1px lightgray;">
                         <img src="{{ asset('images/' . $t->gambar) }}" class="card-img-top" alt="{{ $t->gambar }}" height="200px">
                         <div class="card-body bg-gray">
                             <h5 class="text-title text-center fw-bold fs-6 color-gray-dark">
