@@ -129,6 +129,58 @@
 				@endif
 			@endforeach
 		</div>
+
+		<div class="overlay"></div>
+
+		<div class="popup">
+			<h2>PERINGATAN</h2>
+			<p>Tempat wisata ini buka pada jam {{$tempatWisata->jam_buka}} sampai {{$tempatWisata->jam_tutup}}</p>
+			<button class="close-button">Tutup</button>
+		</div>
+
+		<script>
+			// Ambil waktu tutup tempat wisata dari variabel PHP
+			var jamTutup = "{{ $tempatWisata->jam_tutup }}";
+			// Ambil waktu saat ini
+			var waktuSekarang = new Date();
+			// Ambil jam saat ini
+			var jamSekarang = waktuSekarang.getHours();
+
+			// Konversi format waktu tutup menjadi jam dalam format 24 jam
+			var jamTutupArray = jamTutup.split(":");
+			var jamTutup24 = parseInt(jamTutupArray[0]);
+			// Jika format waktu tutup adalah PM, tambahkan 12 jam
+			if (jamTutupArray[1].indexOf("PM") !== -1) {
+				jamTutup24 += 12;
+			}
+
+			// Tampilkan pop-up alert jika waktu saat ini lebih besar atau sama dengan waktu tutup
+			if (jamSekarang >= jamTutup24) {
+				// jika waktu saat ini berada dalam rentang waktu yang ditentukan,
+				// tampilkan popup selama 10 detik setelah delay sebelum muncul
+				const popup = document.querySelector(".popup");
+				const overlay = document.querySelector(".overlay");
+				const closeButton = document.querySelector(".close-button");
+				setTimeout(() => {
+				popup.style.display = "block";
+				overlay.style.display = "block";
+				setTimeout(() => {
+					popup.style.display = "none";
+					overlay.style.display = "none";
+				}, 10000); // tutup popup setelah 10 detik
+
+				closeButton.addEventListener("click", () => {
+					popup.style.display = "none";
+					overlay.style.display = "none";
+				});
+				}, 500); // tampilkan popup setelah delay 5 detik
+			}
+		</script>
+
+		
+		
+
+
 	</div>
 </div>
 	</div>

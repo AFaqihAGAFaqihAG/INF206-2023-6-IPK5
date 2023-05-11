@@ -26,6 +26,41 @@
             </div>
           </div>
         </div>
+
+        <!-- <div class="overlay"></div>
+        <div class="popup">
+            <h2>Peringatan</h2>
+            <p>Email atau password yang Anda masukkan salah</p>
+            <button class="close-button">Tutup</button>
+        </div>
+
+        <script>
+            const loginForm = document.getElementById('login-form');
+            const popup = document.querySelector('.popup');
+            const overlay = document.querySelector('.overlay');
+            const closeButton = document.querySelector('.close-button');
+
+            loginForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(loginForm);
+                const response = await fetch(loginForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                if (result.status === 'success') {
+                    loginForm.submit();
+                } else {
+                    popup.style.display = "block";
+                    overlay.style.display = "block";
+                    closeButton.addEventListener("click", () => {
+                        popup.style.display = "none";
+                        overlay.style.display = "none";
+                    });
+                }
+            });
+        </script> -->
+
     </div>
 </body>
 </html>
