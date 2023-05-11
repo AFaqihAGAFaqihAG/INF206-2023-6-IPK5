@@ -82,22 +82,24 @@
 			<form action="/review-post" method="post">
 			@csrf
 				<input type="hidden" name="id_tempat" value="{{ $tempatWisata->id_tempat }}">
-				<div class="input_data">
+				<div class="input_data mb-3">
 					<label for="R_nama" style="font-weight: bold; font-family: 'Times New Roman', serif;">Masukan Nama</label>
-					<input class="input_nama @error('R_nama') is-invalid @enderror" type="text" name="R_nama" placeholder="NAMA">
+					<input class="input_nama @error('R_nama') is-invalid @enderror" type="text" name="R_nama" placeholder="Masukan Nama Anda Disini">
 				</div>
-				<div class="input_data">
+				<div class="input_data mb-3">
 					<label for="isi_review" style="font-weight: bold; font-family: 'Times New Roman', serif;">Tulis review</label>
-					<textarea class="input_review" type="text" name="isi_review" placeholder="Tulis..."></textarea>
+					<textarea class="input_review" type="text" name="isi_review" placeholder="Review...."></textarea>
 				</div>
 				<div class="button">
-						<button type="submit" class="btn_submit">post</button>
-					</div>
+					<button type="submit" class="btn btn-outline-dark" style="float: right; margin-top: 5px; background-color: rgb(144, 222, 255); width: 100px; height: 45px;">
+						post
+					</button>
+				</div>	
 			</form>
 		</div>
-		<div style="margin-top: 30px;"><H3>Review</H3></div>
+		<div style="font-weight:bolder; font-family: 'Times New Roman', serif; margin-top: 30px; font-size:xx-large;"><p>Review</p></div>
 		<hr style="margin-bottom:5px;">
-		<div class="review_tempatWisata">
+		<!-- <div class="review_tempatWisata">
 			@foreach($reviews as $review)
 				@if($review->id_tempat_wisata == $tempatWisata->id_tempat)
 					<div class="reviews">
@@ -106,7 +108,26 @@
 					</div>
 				@endif
 			@endforeach
+		</div> -->
+		<div class="container">
+			<div class="row">
+				@foreach($reviews as $review)
+					@if($review->id_tempat_wisata == $tempatWisata->id_tempat)
+						<div class="col-md-4 mb-3">
+							<div class="card">
+								<div class="card-body">
+									<div class="reviews">
+										<h3>{{ $review->R_nama }}<span style="color:gray;font-size:12px;"> {{ $review->created_at->format('d M Y') }}</span></h3>
+										<p>"{{ $review->isi_review }}"</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					@endif
+				@endforeach
+			</div>
 		</div>
+
 	</div>
 </div>
 	</div>
