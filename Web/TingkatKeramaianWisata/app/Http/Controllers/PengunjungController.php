@@ -6,6 +6,7 @@ use App\Models\TempatWisata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Review;
+use App\Models\HargaTiket;
 
 class PengunjungController extends Controller
 {
@@ -15,10 +16,13 @@ class PengunjungController extends Controller
         $tempatWisata = DB::table('tempat_wisata')
             ->where('id_tempat', '=', $id_tempat)
             ->first();
-            
+        
+        $tempatWisata = TempatWisata::findOrFail($id_tempat);
+        $hargaTiket = HargaTiket::where('id_tempat_wisata', $id_tempat)->get();
+
         $reviews = Review::all();
         // tampilkan halaman pengunjung dengan data dari database
-        return view('PengunjungPage', compact('tempatWisata', 'reviews' ));
+        return view('PengunjungPage', compact('tempatWisata','hargaTiket', 'reviews' ));
     }
     
 

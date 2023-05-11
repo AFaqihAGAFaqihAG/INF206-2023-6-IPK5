@@ -52,7 +52,7 @@
                 background-color:#ffffff;
                 padding-top:10px;
                 border-radius: 10px;
-                opacity: 150%;
+                opacity: 0.8;
             }
         </style>
 
