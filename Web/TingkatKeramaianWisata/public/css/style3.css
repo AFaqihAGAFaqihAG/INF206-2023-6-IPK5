@@ -45,7 +45,7 @@ body {
     background-image: url(website-background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main {
@@ -179,4 +179,10 @@ body {
     font-size: 24px;
     color: #000000;
     text-decoration: none;
+}
+
+.button-link {
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: black;
 }
