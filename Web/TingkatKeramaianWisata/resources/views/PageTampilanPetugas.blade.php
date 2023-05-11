@@ -13,7 +13,9 @@
         <a href="/"><h1 style="font-weight: bold;">PARIWISATAKU</h1></a>
         <!-- if user is logged in, show user name -->
         @auth
-            <p><a href="/">{{ Auth::user()->name }}</a></p>
+            <a class="nav-link" href="/">
+                <button type="button" class="btn fw-bold fs-5 btn-sm color-gray-dark bg-gray">{{ Auth::user()->name }}</button>
+            </a>
         @else
             Petugas
         @endauth   

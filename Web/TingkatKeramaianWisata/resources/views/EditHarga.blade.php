@@ -16,16 +16,74 @@
         </div>
     </header>
 
-    <div class="content">
+    <div class="m-4">
+        <h3 class="text-center" style="font-weight: bold;">Harga Tiket {{ $tempatWisata->nama_tempat }}</h3>
+
+        <div class="form-container">
+            <h4 class="form-title text-center">Edit Informasi Tempat Wisata</h4>
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">ID Harga Tiket</th>
+                    <th scope="col" class="text-center">Jenis Tiket</th>
+                    <th scope="col" class="text-center">Harga</th>
+                    <th scope="col" class="text-center">Sisa Jumlah</th>
+                    <th scope="col" class="text-center">Harga Tiket</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if($hargaTiket -> isEmpty())
+                    <tr>
+                        <td colspan="4">Belum ada data harga tiket untuk tempat wisata ini.</td>
+                    </tr>
+                    @else
+                    @foreach ($hargaTiket as $tiket)
+                        <tr>
+                            <td class="text-center">{{ $tiket->id_harga_tiket }}</td>
+                            <td class="text-center">{{ $tiket->jenis_tiket }}</td>
+                            <td class="text-center">{{ $tiket->harga }}</td>
+                            <td class="text-center">{{ $tiket->sisa_jumlah }}</td>
+                            <td class="text-center">
+                            <div class="form-container">
+                                <!-- <h3 class="form-title">Edit Harga Tiket</h3> -->
+                                <form id="form-edit-harga" method="POST" action="{{ route('EditHarga.update', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
+                                    @csrf
+                                    @method('PUT')
+                                    <input type="hidden" name="id_tempat" value="{{ $tempatWisata->id_tempat }}">
+                                    <input type="hidden" name="id_harga_tiket" value="{{ $tiket->id_harga_tiket }}">
+                                    <label for="jenis-tiket">Jenis Tiket:</label>
+                                    <input type="text" id="jenis-tiket" name="jenis_tiket" value="{{ $tiket->jenis_tiket }}" required>
+                                    <label for="harga">Harga:</label>
+                                    <input type="text" id="harga" name="harga" value="{{ $tiket->harga }}" required>
+                                    <label for="sisa-jumlah">Sisa Jumlah:</label>
+                                    <input type="number" id="sisa-jumlah" name="sisa_jumlah" value="{{ $tiket->sisa_jumlah }}" required>
+                                    <button type="submit" class="btn btn-light btn-sm">Simpan</button>
+                                </form>
+                                </div>
+                                <!-- <form id="form-hapus-harga-{{ $tiket->id_harga_tiket }}" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-light" type="submit" onclick="hapusHargaTiket({{ $tiket->id_harga_tiket }})">Hapus</button>
+                                </form> -->
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
+            </tbody>
+        </table>
+
+        <button class="btn btn-light btn-sm" onclick="location.href='{{ route('petugas.show', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Kembali</button>
+    </div>
+    <!-- <div class="content">
         <h2 class="main-title">Harga Tiket {{ $tempatWisata->nama_tempat }}</h2>
 
         <div class="form-container">
             <h3 class="form-title">Edit Informasi Tempat Wisata</h3>
-            <!-- form edit informasi tempat wisata -->
         </div>
 
         <div class="table-container">
-            <h3 class="table-title">Harga Tiket</h3>
             <table>
                 <thead>
                     <tr>
@@ -91,8 +149,9 @@
                     <button type="submit" class="btn btn-light">Tambah</button>
                 </form>
             </div>
+        </div>
+    </div> -->
 
 
-<button class="btn btn-light" onclick="location.href='{{ route('petugas.show', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Kembali</button>
 
 

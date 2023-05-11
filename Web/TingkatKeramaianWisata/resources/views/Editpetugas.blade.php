@@ -11,7 +11,7 @@
 <body>
 	<div class="background">
 		<header class="header">
-			<a href="/"><h1 style="font-weight: bold;">PARIWISATAKU</h1></a>
+			<a href="/"><h1 style="font-weight: bold; text-decoration:none;">PARIWISATAKU</h1></a>
 		</header>
 	<h1>EDIT</h1>
 	<form method="POST" action="{{ route('petugas.update', $tempatWisata->id_tempat) }}">
