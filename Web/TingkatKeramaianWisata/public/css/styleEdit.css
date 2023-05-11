@@ -1,29 +1,68 @@
-*{
-    .bg {
-        /* The image used */
-        background-image: url("website-background.png");
-    
-        /* Full height */
-        height: 100%;
-    
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-        }
+body {
+  background-image: url(website-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    .btn {
-        background-color: blue;
-        color: white;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        float: right;
-      }
+.header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px;
+}
 
-      .btn:hover {
-        background-color: darkblue;
-      }
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 50%;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select,
+textarea,
+input[type="time"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
 }

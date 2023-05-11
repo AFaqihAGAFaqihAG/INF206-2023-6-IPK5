@@ -45,11 +45,7 @@ Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
 
 Route::post('/review-post', [PengunjungController::class, 'postReview']);
 
-
-Route::get('/tempat-wisata/{id}/harga-tiket', [HargaTiketController::class, 'index'])->name('harga-tiket');
-
 Route::get('/', [LandingPageController::class, 'index']);
-
 
 Route::get('/tampilanPetugas', function () {
     return view('PageTampilanPetugas');
@@ -70,3 +66,4 @@ Route::put('/petugas/{id_tempat}/editharga/{id_harga_tiket}', [HargaTiketControl
 Route::delete('/petugas/{id_tempat}/editharga/{id_harga_tiket}', [HargaTiketController::class, 'destroy'])
     ->name('EditHarga.destroy');
 Route::post('/petugas/{id_tempat}/editharga', [HargaTiketController::class, 'store'])->name('EditHarga.store')->middleware('auth');
+Route::post('/tempat-wisata/{id_tempat}/harga-tiket/{id_harga_tiket}/confirm', [HargaTiketController::class, 'confirm'])->name('harga-tiket.confirm');
