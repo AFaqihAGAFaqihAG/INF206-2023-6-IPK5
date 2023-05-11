@@ -72,6 +72,32 @@
 			</div>
 		</div>
 
+		<div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jenis Tiket</th>
+                        <th>Harga</th>
+                        <th>sisa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if($hargaTiket -> isEmpty())
+                <tr>
+                    <td colspan="3">Belum ada data harga tiket untuk tempat wisata ini.</td>
+                </tr>
+                    @else
+                    @foreach ($hargaTiket as $tiket)
+                        <tr>
+                            <td>{{ $tiket->jenis_tiket }}</td>
+                            <td>{{ $tiket->harga }}</td>
+                            <td>{{ $tiket->sisa_jumlah}}
+                        </tr>
+                    @endforeach
+                @endif
+            </table>
+        </div>
+
 		<!--Review-->
 		<div class="review_layout">
 		<div class="masukan_review">
@@ -105,13 +131,6 @@
 		</div>
 	</div>
 </div>
-
-		<div>
-			<button class="btn-tiket" type="button" onclick="window.location.href='{{ route('harga-tiket', ['id' => $tempatWisata->id_tempat]) }}'">Harga Tiket</button>
-		</div>
-		<div>
-			<button class="btn-kembali" type="button" onclick="window.location.href='/'">Kembali</button>
-		</div>
 	</div>
 </body>
 </html>

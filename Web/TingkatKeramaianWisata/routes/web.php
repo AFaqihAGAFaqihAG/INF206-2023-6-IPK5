@@ -45,11 +45,7 @@ Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
 
 Route::post('/review-post', [PengunjungController::class, 'postReview']);
 
-
-Route::get('/tempat-wisata/{id}/harga-tiket', [HargaTiketController::class, 'index'])->name('harga-tiket');
-
 Route::get('/', [LandingPageController::class, 'index']);
-
 
 Route::get('/tampilanPetugas', function () {
     return view('PageTampilanPetugas');
