@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PARAWISATAKU - Harga Tiket</title>
-    <link rel="stylesheet" href="{{ asset('css/styleHarga.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style4.css') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
     <header class="header">
@@ -60,15 +62,14 @@
                                     <input type="text" id="harga" name="harga" value="{{ $tiket->harga }}" required>
                                     <label for="sisa-jumlah">Sisa Jumlah:</label>
                                     <input type="number" id="sisa-jumlah" name="sisa_jumlah" value="{{ $tiket->sisa_jumlah }}" required>
-                                    <button type="submit" class="btn-edit-harga">Simpan</button>
+                                    <button type="submit" class="btn btn-light">Simpan</button>
                                 </form>
                                 </div>
-                            <form id="form-hapus-harga-{{ $tiket->id_harga_tiket }}" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn-hapus" type="submit" onclick="hapusHargaTiket({{ $tiket->id_harga_tiket }})">Hapus</button>
-                            </form>
-
+                                <form id="form-hapus-harga-{{ $tiket->id_harga_tiket }}" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-light" type="submit" onclick="hapusHargaTiket({{ $tiket->id_harga_tiket }})">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
@@ -87,11 +88,11 @@
                     <input type="text" id="harga" name="harga" required>
                     <label for="sisa-jumlah">Sisa Jumlah:</label>
                     <input type="number" id="sisa-jumlah" name="sisa_jumlah" required>
-                    <button type="submit" class="btn-tambah">Tambah</button>
+                    <button type="submit" class="btn btn-light">Tambah</button>
                 </form>
             </div>
 
 
-<button class="btn-kembali" onclick="location.href='{{ route('petugas.show', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Kembali</button>
+<button class="btn btn-light" onclick="location.href='{{ route('petugas.show', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Kembali</button>
 
 
