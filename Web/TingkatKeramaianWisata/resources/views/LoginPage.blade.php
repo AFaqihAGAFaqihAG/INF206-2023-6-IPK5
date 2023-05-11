@@ -11,7 +11,7 @@
     <div class="bg">
      <div class="login_layout">
           <div class="login">
-          <form action="{{ route('login') }}" method="post">
+          <form action="{{ route('login') }}" method="post" id="login-form">
               @csrf <!-- Menambahkan token CSRF di dalam form -->
             <div class="login-teks">Masukan EMAIL & Password</div>
             <div class="input_data">
@@ -27,18 +27,19 @@
           </div>
         </div>
 
-        <!-- <div class="overlay"></div>
-        <div class="popup">
-            <h2>Peringatan</h2>
-            <p>Email atau password yang Anda masukkan salah</p>
-            <button class="close-button">Tutup</button>
+        <div class="overlay"></div>
+
+        <div class="popup" id="popup">
+            <h2>Gagal Login</h2>
+            <p id="popup-message">username/password salah</p>
+            <button class="close-button" id="close-button">&times;</button>
         </div>
 
         <script>
             const loginForm = document.getElementById('login-form');
-            const popup = document.querySelector('.popup');
-            const overlay = document.querySelector('.overlay');
-            const closeButton = document.querySelector('.close-button');
+            const popup = document.getElementById('popup');
+            const popupMessage = document.getElementById('popup-message');
+            const closeButton = document.getElementById('close-button');
 
             loginForm.addEventListener('submit', async (event) => {
                 event.preventDefault();
@@ -51,15 +52,21 @@
                 if (result.status === 'success') {
                     loginForm.submit();
                 } else {
+                    popupMessage.innerText = result.message;
                     popup.style.display = "block";
-                    overlay.style.display = "block";
-                    closeButton.addEventListener("click", () => {
-                        popup.style.display = "none";
-                        overlay.style.display = "none";
-                    });
                 }
             });
-        </script> -->
+
+            closeButton.addEventListener('click', () => {
+                popup.style.display = "none";
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = "none";
+                }
+            });
+        </script>
 
     </div>
 </body>

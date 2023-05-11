@@ -79,7 +79,7 @@
         <h1 style="text-align: center;color:black;font-size:96px;font-weight:bold;">PARIWISATAKU</h1>
         <div class="search mb-3">
             <div class="search-container">
-                <form action="#" method="get">
+            <form action="#" method="get">
                 <input type="text" placeholder="Search..." name="search">
                 </form>
             </div>
