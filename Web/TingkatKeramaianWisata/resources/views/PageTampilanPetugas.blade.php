@@ -25,10 +25,18 @@
             <img src="{{ asset('images/' . $tempatWisata->gambar) }}" alt="Foto">
         </div>
         <div class="keterangan">
-            <p class="indicatorPenuh">Penuh/</p>
-            <p class="indicatorRamai">Ramai/</p>
-            <p class="indicatorNormal">Normal/</p>
-            <p class="indicatorSepi">Sepi</p>
+            <!-- Indikator Penuh -->
+            <p class="indicatorPenuh" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'penuh' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'penuh' ? 'red' : 'gray' }}">Penuh/</p>
+
+            <!-- Indikator Ramai -->
+            <p class="indicatorRamai" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'ramai' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'ramai' ? 'yellow' : 'gray' }}">Ramai/</p>
+
+            <!-- Indikator Normal -->
+            <p class="indicatorNormal" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'normal' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'normal' ? 'green' : 'gray' }}">Normal/</p>
+
+            <!-- Indikator Sepi -->
+            <p class="indicatorSepi" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'sepi' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'sepi' ? 'white' : 'gray' }}">Sepi</p>
+
             <p class="name">Nama: {{ $tempatWisata->nama_tempat }}</p>
             <p class="location">Lokasi: {{ $tempatWisata->alamat }}</p>
             <p class="hours">Jam Buka/Tutup: {{ $tempatWisata->jam_buka }} - {{ $tempatWisata->jam_tutup }}</p>
@@ -42,8 +50,8 @@
     </main>
 
     <div>
-        <button class="btn-edit" type="onclick"> <a class="btn_klik" href="#">Edit </button>
-        <button class="btn-harga" onclick="location.href='{{ route('EditHarga', ['id_tempat' => $tempatWisata->id_tempat]) }}'">Edit Harga Tiket</button>
+        <button class="btn-edit" type="onclick"> <a class="btn_klik" href="{{ route('petugas.editPetugas', ['id_tempat' => $tempatWisata->id_tempat]) }}">Edit </button>
+        <button class="btn-harga"type="onclick"><a class="btn_klik" href="{{ route('EditHarga', ['id_tempat' => $tempatWisata->id_tempat]) }}">Edit Harga Tiket</button>
 
         <form method="post" action="{{ route('logout') }}">
             @csrf

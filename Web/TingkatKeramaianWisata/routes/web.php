@@ -36,6 +36,10 @@ Route::get('pengunjung', function () {
     return view('PengunjungPage');
 });
 
+Route::get('Editpetugas', function () {
+    return view('Editpetugas');
+});
+
 
 Route::get('/pengunjung/{id_tempat}', [PengunjungController::class, 'show']);
 
@@ -55,10 +59,14 @@ Route::get('/petugas/{id_tempat}', [PetugasController::class, 'show'])
     ->name('petugas.show')
     ->middleware('auth');
 
+Route::get('/petugas/{id_tempat}/editpetugas', [PetugasController::class, 'editPetugas'])->name('petugas.editPetugas');
+
+Route::put('/petugas/{id_tempat}/editpetugas', [PetugasController::class, 'update'])->name('petugas.update');
+
+
 Route::get('/petugas/{id_tempat}/editharga', [HargaTiketController::class, 'edit'])->name('EditHarga');
 
 Route::put('/petugas/{id_tempat}/editharga/{id_harga_tiket}', [HargaTiketController::class, 'update'])->name('EditHarga.update');
 Route::delete('/petugas/{id_tempat}/editharga/{id_harga_tiket}', [HargaTiketController::class, 'destroy'])
     ->name('EditHarga.destroy');
 Route::post('/petugas/{id_tempat}/editharga', [HargaTiketController::class, 'store'])->name('EditHarga.store')->middleware('auth');
-
