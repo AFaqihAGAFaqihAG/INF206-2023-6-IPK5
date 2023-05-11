@@ -49,6 +49,7 @@
             }
 
             .card-container{
+                overflow: hidden;
                 background-color:#ffffff;
                 padding-top:10px;
                 border-radius: 10px;
@@ -87,8 +88,11 @@
 
         <!-- Card to display tempatWisata (images with its name) -->
         <div class="container card-container" >
-            <h1 class="fw-bold fs-1 m-0" style="text-align: center;">Rekomendasi Tempat Wisata</h1>
+            <h1 class="fw-bold fs-1 m-0" style="text-align: center;">Hasil pencarian</h1>
             <hr class="m-1 mb-3">
+            @if($tempatWisata -> isEmpty())
+                <h4 style="text-align: center;color: gray;margin-bottom: 500px;">Hasil Pencarian Tidak ditemukan</h4>
+            @else
             <div class="row">
                 @foreach($tempatWisata as $t)
                 <div class="col-md-4">
@@ -105,6 +109,7 @@
                     </a>
                 </div>
                 @endforeach
+            @endif
             </div>
         </div>
 
