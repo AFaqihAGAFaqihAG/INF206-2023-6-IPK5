@@ -194,14 +194,13 @@ form {
 .review_layout button{
     
 }
+
 .btn_submit{ 
     float: right;
     margin-top: 5px;
-    background-color: rgb(21, 91, 243);
+    background-color: rgb(144, 222, 255);
     width: 100px;
     height: 45px;
-    font-size: large;
-    font-weight: bold;
     color: #ffffff;
     border-radius: 5px;
     
