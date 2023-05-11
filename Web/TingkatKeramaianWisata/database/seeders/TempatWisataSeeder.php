@@ -13,202 +13,70 @@ class TempatWisataSeeder extends Seeder
     public function run(): void
     {
         TempatWisata::create([
-            'nama_tempat' => 'Taman Mini Indonesia Indah',
+            'nama_tempat' => 'Museum Tsunami Aceh',
             'gambar' => 'gambar_1.png',
-            'alamat' => ' Jl. Raya Jakarta-Tangerang, Jakarta Timur',
+            'alamat' => 'Kec. Baiturrahman Banda Aceh',
             'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '18:00:00',
-            'jumlah_pengunjung' => 100,
+            'jam_buka' => '09:00:00',
+            'jam_tutup' => '16:00:00',
+            'jumlah_pengunjung' => 50,
             'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi'
+            'note' => 'Jika Anda mencari tempat untuk bersantai dan menikmati waktu sendiri, maka saat ini mungkin adalah waktu yang tepat untuk mengunjungi tempat wisata yang sedang sepi. Dengan sedikit atau bahkan tanpa kerumunan orang, pengunjung dapat menikmati keindahan dan kenyamanan tempat wisata dengan lebih tenang dan santai.' 
         ]);
         TempatWisata::create([
-            'nama_tempat' => 'Tanah Lot',
+            'nama_tempat' => 'Museum Aceh',
             'gambar' => 'gambar_2.png',
-            'alamat' => 'Beraban, Kediri, Tabanan, Bali',
+            'alamat' => 'Kec. Baiturrahman, Banda Aceh',
             'status' => 'buka',
-            'jam_buka' => '07:00:00',
-            'jam_tutup' => '19:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
+            'jam_buka' => '08:30:00',
+            'jam_tutup' => '16:15:00',
+            'jumlah_pengunjung' => 30,
+            'tingkat_keramaian' => 'sepi',
+            'note' => 'Jika Anda mencari tempat untuk bersantai dan menikmati waktu sendiri, maka saat ini mungkin adalah waktu yang tepat untuk mengunjungi tempat wisata yang sedang sepi. Dengan sedikit atau bahkan tanpa kerumunan orang, pengunjung dapat menikmati keindahan dan kenyamanan tempat wisata dengan lebih tenang dan santai.' 
         ]);
         TempatWisata::create([
-            'nama_tempat' => 'Candi Borobudur',
+            'nama_tempat' => 'Pantai Ulee Lheue',
             'gambar' => 'gambar_3.png',
-            'alamat' => 'Jl. Badrawati, Borobudur, Magelang, Jawa Tengah',
+            'alamat' => 'Kec. Meuraxa, Banda Aceh',
             'status' => 'buka',
             'jam_buka' => '06:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Gunung Bromo',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Desa Ngadisari,Probolinggo,Jawa Timur.',
-            'status' => 'buka',
-            'jam_buka' => '00:00:00',
-            'jam_tutup' => '00:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Danau Toba',
-            'gambar' => 'gambar_1.png',
-            'alamat' => 'Pulau Samosir, Toba, Sumatra Utara',
-            'status' => 'buka',
-            'jam_buka' => '00:00:00',
-            'jam_tutup' => '00:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Candi Prambanan',
-            'gambar' => 'gambar_2.png',
-            'alamat' => ' Bokoharjo, Prambanan, Sleman, Yogyakarta',
-            'status' => 'buka',
-            'jam_buka' => '06:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Pulau komodo',
-            'gambar' => 'gambar_3.png',
-            'alamat' => 'Pulau Komodo, Nusa Tenggara Timur',
-            'status' => 'buka',
-            'jam_buka' => '07:00:00',
-            'jam_tutup' => '16:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Bali Safari and Marine Park',
-            'gambar' => 'gambar_4.png',
-            'alamat' => ' Jl. Bypass Prof. Dr. Ida Bagus Mantra Km. 19,8, Gianyar, Bali',
-            'status' => 'buka',
-            'jam_buka' => '09:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Monas',
-            'gambar' => 'gambar_1.png',
-            'alamat' => 'Gambir, Jakarta Pusat',
-            'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '16:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Jatim Park 2',
-            'gambar' => 'gambar_2.png',
-            'alamat' => 'Jl. Oro-Oro Ombo No. 9-11, Batu, Jawa Timur',
-            'status' => 'buka',
-            'jam_buka' => '09:00:00',
             'jam_tutup' => '18:00:00',
             'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
+            'tingkat_keramaian' => 'padat',
+            'note' => 'Jika Anda sedang mencari tempat wisata yang penuh dengan keramaian dan aktivitas, maka mungkin tempat wisata yang sedang padat adalah pilihan yang tepat untuk Anda. Di tempat seperti ini, Anda akan menemukan banyak pengunjung yang memadati area wisata. Namun jika anda tidak menyukai keramaian berlebih, maka tidak disarankan untuk anda pergi ke tempat wisata ini.' 
+        ]);   
         TempatWisata::create([
-            'nama_tempat' => 'Taman Safari Indonesia',
-            'gambar' => 'gambar_3.png',
-            'alamat' => 'Jl. Raya Puncak No.601, Cisarua, Bogor, Jawa Barat',
+            'nama_tempat' => 'Rumah Cut Nyak Dien',
+            'gambar' => 'gambar_4.png',
+            'alamat' => 'Kec. Peukan Bada, Aceh Besar',
             'status' => 'buka',
             'jam_buka' => '09:00:00',
             'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 100,
-            'tingkat_keramaian' => 'sepi',
-            'note' => 'tempat sedang sepi'
-        ]);
+            'jumlah_pengunjung' => 25,
+            'tingkat_keramaian' => 'sedang',
+            'note' => 'Tempat wisata saat ini berada dalam keadaan normal, artinya tempat tersebut tidak terlalu ramai dan tidak terlalu sepi. Anda tetap dapat menikmati keadaan tempat wisata secara tenang dan tidak perlu mengantri terlalu lama untuk menikmati fasilitas didalamnya.' 
+        ]);     
+        TempatWisata::create([
+            'nama_tempat' => 'Museum PLTD Apung',
+            'gambar' => 'gambar_5.png',
+            'alamat' => 'Kec. Jaya Baru, Banda Aceh',
+            'status' => 'buka',
+            'jam_buka' => '09:00:00',
+            'jam_tutup' => '17:30:00',
+            'jumlah_pengunjung' => 200,
+            'tingkat_keramaian' => 'padat',
+            'note' => 'Jika Anda sedang mencari tempat wisata yang penuh dengan keramaian dan aktivitas, maka mungkin tempat wisata yang sedang padat adalah pilihan yang tepat untuk Anda. Di tempat seperti ini, Anda akan menemukan banyak pengunjung yang memadati area wisata. Namun jika anda tidak menyukai keramaian berlebih, maka tidak disarankan untuk anda pergi ke tempat wisata ini.' 
+        ]);     
         TempatWisata::create([
             'nama_tempat' => 'Pantai Lampuuk',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Desa Lampuuk, Kecamatan Lhoknga,Aceh Besar, Aceh',
+            'gambar' => 'gambar_6.png',
+            'alamat' => 'Kec. Lhoknga, Aceh Besar',
             'status' => 'buka',
             'jam_buka' => '08:00:00',
-            'jam_tutup' => '18:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Masjid Raya Baiturrahman',
-            'gambar' => 'gambar_4.png',
-            'alamat' => ' Jl. Mohd. Jam, Kecamatan Baiturrahman, Kota Banda Aceh, Aceh',
-            'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Pantai Ujong Kareung',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Kecamatan Krueng Barona Jaya, Kabupaten Aceh Besar, Aceh',
-            'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Taman Putroe Phang',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Jl. Tgk. Daud Beureueh, Kecamatan Baiturrahman, Kota Banda Aceh, Aceh',
-            'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Taman Sari Gunongan Historical Park',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Jalan Teuku Nyak Arief, Kecamatan Baiturrahman, Kota Banda Aceh, Aceh',
-            'status' => 'buka',
-            'jam_buka' => '09:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Air Terjun Lhok Meuriah',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Desa Bukit Mas, Kecamatan Dewantara, Aceh Utara, Aceh',
-            'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '18:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
-        TempatWisata::create([
-            'nama_tempat' => 'Taman Nasional Tanjung Puting',
-            'gambar' => 'gambar_4.png',
-            'alamat' => 'Jl. Tanjung Harapan No.1, Kumai Hilir,Kotawaringin Barat, Kalimantan Tengah',
-            'status' => 'buka',
-            'jam_buka' => '08:00:00',
-            'jam_tutup' => '17:00:00',
-            'jumlah_pengunjung' => 200,
-            'tingkat_keramaian' => 'sedang',
-            'note' => 'tempat dalam keadaan normal'
-        ]);
+            'jam_tutup' => '18:30:00',
+            'jumlah_pengunjung' => 400,
+            'tingkat_keramaian' => 'padat',
+            'note' => 'Jika Anda sedang mencari tempat wisata yang penuh dengan keramaian dan aktivitas, maka mungkin tempat wisata yang sedang padat adalah pilihan yang tepat untuk Anda. Di tempat seperti ini, Anda akan menemukan banyak pengunjung yang memadati area wisata. Namun jika anda tidak menyukai keramaian berlebih, maka tidak disarankan untuk anda pergi ke tempat wisata ini.' 
+        ]);      
     }
 }

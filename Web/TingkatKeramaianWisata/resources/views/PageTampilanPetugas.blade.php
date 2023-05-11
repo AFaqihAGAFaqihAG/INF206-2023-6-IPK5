@@ -4,37 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PARAWISATAKU</title>
-    <link rel="stylesheet" href="style3.css">
+	<title>PARAWISATAKU - Petugas</title>
+	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
 </head>
 <body>
-	<div class="background">
-		<main class="main">	
-			<div>
-				<img src="images/gambarWisata.jpg" alt="Foto">
-			</div>
-			<div class="keterangan">
-				<p class="indicatorPenuh">Penuh/</p>
-				<p class="indicatorRamai">Ramai/</p>
-				<p class="indicatorNormal">Normal/</p>
-				<p class="indicatorSepi">Sepi</p>
-				<p class="name">Nama: </p>
-				<p class="location">Lokasi: </p>
-				<p class="hours">Jam Buka/Tutup: </p>
-			</div>
-			<div>
-				<h3>Deskripsi:</h3>
-			</div>
-			<div class="deskripsi-box">
-				<p class="deskripsi">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, molestias?</p>
-			</div>
-		</main>
-	
-		<div>
-			<button class="btn-edit" type="onclick"> <a class="btn_klik" href="/Edit">Edit </button>
-			<button class="btn-logout" type="onclick"> <a class="btn_klik" href="/Logout">Logout </button>
-		</div>
-	</div>
-	
+<header class="header">    
+    <h1>PARIWISATAKU.COM</h1>
+    <!-- if user is logged in, show user name -->
+    @auth
+        <p><a href="/">{{ Auth::user()->name }}</p>
+    @else
+        Petugas
+    @endauth   
+    <hr>
+</header> 
+
+<div class="background">
+    <main class="main">    
+        <div>
+            <img src="{{ asset('images/' . $tempatWisata->gambar) }}" alt="Foto">
+        </div>
+        <div class="keterangan">
+            <!-- Indikator Penuh -->
+            <p class="indicatorPenuh" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'penuh' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'penuh' ? 'red' : 'gray' }}">Penuh/</p>
+
+            <!-- Indikator Ramai -->
+            <p class="indicatorRamai" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'ramai' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'ramai' ? 'yellow' : 'gray' }}">Ramai/</p>
+
+            <!-- Indikator Normal -->
+            <p class="indicatorNormal" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'normal' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'normal' ? 'green' : 'gray' }}">Normal/</p>
+
+            <!-- Indikator Sepi -->
+            <p class="indicatorSepi" style="opacity: {{ $tempatWisata->tingkat_keramaian == 'sepi' ? '1' : '0.5' }}; color: {{ $tempatWisata->tingkat_keramaian == 'sepi' ? 'white' : 'gray' }}">Sepi</p>
+
+            <p class="name">Nama: {{ $tempatWisata->nama_tempat }}</p>
+            <p class="location">Lokasi: {{ $tempatWisata->alamat }}</p>
+            <p class="hours">Jam Buka/Tutup: {{ $tempatWisata->jam_buka }} - {{ $tempatWisata->jam_tutup }}</p>
+        </div>
+        <div>
+            <h3>Deskripsi:</h3>
+        </div>
+        <div class="deskripsi-box">
+            <p class="deskripsi">{{ $tempatWisata->note}}</p>
+        </div>
+    </main>
+
+    <div>
+        <button class="btn-edit" type="onclick"> <a class="btn_klik" href="{{ route('petugas.editPetugas', ['id_tempat' => $tempatWisata->id_tempat]) }}">Edit </button>
+        <button class="btn-harga"type="onclick"><a class="btn_klik" href="{{ route('EditHarga', ['id_tempat' => $tempatWisata->id_tempat]) }}">Edit Harga Tiket</button>
+
+        <form method="post" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="btn-logout">Logout</button>    
+        </form>
+    </div>
+</div>
 </body>
 </html>
