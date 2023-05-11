@@ -65,11 +65,12 @@
                                     <button type="submit" class="btn btn-light">Simpan</button>
                                 </form>
                                 </div>
-                                <form id="form-hapus-harga-{{ $tiket->id_harga_tiket }}" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
+                                <form id="form-delete-harga" method="POST" action="{{ route('EditHarga.destroy', ['id_tempat' => $tempatWisata->id_tempat, 'id_harga_tiket' => $tiket->id_harga_tiket]) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-light" type="submit" onclick="hapusHargaTiket({{ $tiket->id_harga_tiket }})">Hapus</button>
+                                    <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                 </form>
+                                 
                             </td>
                         </tr>
                     @endforeach
