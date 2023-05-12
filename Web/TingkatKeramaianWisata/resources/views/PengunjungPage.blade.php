@@ -137,23 +137,29 @@
 		</div>
 
 		<script>
-			// Ambil waktu tutup tempat wisata dari variabel PHP
+			// Ambil waktu tutup dan buka tempat wisata dari variabel PHP
 			var jamTutup = "{{ $tempatWisata->jam_tutup }}";
-			// Ambil waktu saat ini
+			var jamBuka = "{{ $tempatWisata->jam_buka }}";
+
+			// Ambil waktu saat ini dan hari saat ini
 			var waktuSekarang = new Date();
-			// Ambil jam saat ini
 			var jamSekarang = waktuSekarang.getHours();
 
-			// Konversi format waktu tutup menjadi jam dalam format 24 jam
+			// Konversi format waktu tutup dan buka menjadi jam dalam format 24 jam
 			var jamTutupArray = jamTutup.split(":");
 			var jamTutup24 = parseInt(jamTutupArray[0]);
-			// Jika format waktu tutup adalah PM, tambahkan 12 jam
 			if (jamTutupArray[1].indexOf("PM") !== -1) {
 				jamTutup24 += 12;
 			}
 
-			// Tampilkan pop-up alert jika waktu saat ini lebih besar atau sama dengan waktu tutup
-			if (jamSekarang >= jamTutup24) {
+			var jamBukaArray = jamBuka.split(":");
+			var jamBuka24 = parseInt(jamBukaArray[0]);
+			if (jamBukaArray[1].indexOf("PM") !== -1) {
+				jamBuka24 += 12;
+			}
+
+			// Tampilkan pop-up alert jika waktu saat ini lebih besar atau sama dengan waktu tutup dan toko sedang buka
+			if ((jamSekarang >= jamTutup24 &&  jamSekarang <= jamBuka24)) {
 				// jika waktu saat ini berada dalam rentang waktu yang ditentukan,
 				// tampilkan popup selama 10 detik setelah delay sebelum muncul
 				const popup = document.querySelector(".popup");
@@ -174,10 +180,6 @@
 				}, 500); // tampilkan popup setelah delay 0,5 detik
 			}
 		</script>
-
-		
-		
-
 
 	</div>
 </div>

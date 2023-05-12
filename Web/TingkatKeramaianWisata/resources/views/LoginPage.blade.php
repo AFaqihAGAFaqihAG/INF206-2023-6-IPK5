@@ -19,7 +19,7 @@
               <input class="input_pass" type="password" name="password" placeholder="PASSWORD">
             <div class="button">
                 <button class="btn_submit" type="button" onclick="window.location.href='/'">Kembali</button>
-                <button class="btn_submit" type="submit" id="submit-btn">Login</button>
+                <button class="btn_submit" type="submit">Login</button>
               </div>
               <p>Belum punya akun? <a href="daftar">Sign Up</a></p>
               </form>
@@ -31,42 +31,41 @@
 
         <div class="popup" id="popup">
             <h2>Gagal Login</h2>
-            <p id="popup-message">username/password salah</p>
+            <p id="popup-message">email/password salah</p>
             <button class="close-button" id="close-button">&times;</button>
         </div>
 
         <script>
             const loginForm = document.getElementById('login-form');
-const popup = document.getElementById('popup');
-const popupMessage = document.getElementById('popup-message');
-const closeButton = document.getElementById('close-button');
+            const popup = document.getElementById('popup');
+            const popupMessage = document.getElementById('popup-message');
+            const closeButton = document.getElementById('close-button');
 
-loginForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const formData = new FormData(loginForm);
-    const response = await fetch(loginForm.action, {
-        method: 'POST',
-        body: formData
-    });
-    const result = await response.json();
-    if (result.status === 'success') {
-        window.location.href = result.url;
-    } else {
-        popupMessage.innerText = result.message;
-        popup.style.display = "block";
-    }
-});
+            loginForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(loginForm);
+                const response = await fetch(loginForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                if (result.status === 'success') {
+                    loginForm.submit();
+                } else {
+                    popupMessage.innerText = result.message;
+                    popup.style.display = "block";
+                }
+            });
 
-closeButton.addEventListener('click', () => {
-    popup.style.display = "none";
-});
+            closeButton.addEventListener('click', () => {
+                popup.style.display = "none";
+            });
 
-window.addEventListener('click', (event) => {
-    if (event.target === popup) {
-        popup.style.display = "none";
-    }
-});
-
+            window.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = "none";
+                }
+            });
         </script>
 
     </div>
