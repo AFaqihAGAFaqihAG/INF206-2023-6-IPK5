@@ -23,6 +23,18 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('dashboard');
+        }
+
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Username atau password salah.',
+        ]);
+        
+
         // Coba untuk melakukan login
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $user = Auth::user();
