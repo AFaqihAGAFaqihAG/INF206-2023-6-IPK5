@@ -87,6 +87,78 @@ class HargaTiketSeeder extends Seeder
                 'harga' => 110000,
                 'sisa_jumlah' => 45,
             ],
+            [
+                'id_tempat_wisata' => 7,
+                'jenis_tiket' => 'Reguler',
+                'harga' => 50000,
+                'sisa_jumlah' => 100,
+            ],
+            [
+                'id_tempat_wisata' => 7,
+                'jenis_tiket' => 'VIP',
+                'harga' => 100000,
+                'sisa_jumlah' => 50,
+            ],
+            [
+                'id_tempat_wisata' => 8,
+                'jenis_tiket' => 'Reguler',
+                'harga' => 75000,
+                'sisa_jumlah' => 75,
+            ],
+            [
+                'id_tempat_wisata' => 8,
+                'jenis_tiket' => 'VIP',
+                'harga' => 150000,
+                'sisa_jumlah' => 25,
+            ],
+            // [
+            //     'id_tempat_wisata' => 9,
+            //     'jenis_tiket' => 'Reguler',
+            //     'harga' => 0,
+            //     'sisa_jumlah' => 80,
+            // ],
+            // [
+            //     'id_tempat_wisata' => 9,
+            //     'jenis_tiket' => 'VIP',
+            //     'harga' => 0,
+            //     'sisa_jumlah' => 40,
+            // ],
+            [
+                'id_tempat_wisata' => 10,
+                'jenis_tiket' => 'Reguler',
+                'harga' => 40000,
+                'sisa_jumlah' => 120,
+            ],
+            [
+                'id_tempat_wisata' => 10,
+                'jenis_tiket' => 'VIP',
+                'harga' => 80000,
+                'sisa_jumlah' => 60,
+            ],
+            [
+                'id_tempat_wisata' => 11,
+                'jenis_tiket' => 'Reguler',
+                'harga' => 55000,
+                'sisa_jumlah' => 90,
+            ],
+            [
+                'id_tempat_wisata' => 11,
+                'jenis_tiket' => 'VIP',
+                'harga' => 110000,
+                'sisa_jumlah' => 45,
+            ],
+            [
+                'id_tempat_wisata' => 12,
+                'jenis_tiket' => 'Reguler',
+                'harga' => 55000,
+                'sisa_jumlah' => 90,
+            ],
+            [
+                'id_tempat_wisata' => 6,
+                'jenis_tiket' => 'VIP',
+                'harga' => 110000,
+                'sisa_jumlah' => 45,
+            ],
         ];
 
         // Insert data harga tiket ke tabel harga_tiket
