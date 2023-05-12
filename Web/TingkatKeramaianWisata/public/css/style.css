@@ -79,7 +79,7 @@ button{
 }
 
 
-/* .popup {
+.popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -92,7 +92,7 @@ button{
     display: none;
   }
   /* CSS untuk blur overlay */
-  /* .overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -103,7 +103,7 @@ button{
     display: none;
   }
   /* CSS untuk tombol close */
-  /* .close-button {
+  .close-button {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -112,4 +112,6 @@ button{
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-  } */
+    margin-top: 5px;
+  }
+  

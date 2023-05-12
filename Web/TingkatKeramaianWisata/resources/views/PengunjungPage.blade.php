@@ -17,7 +17,7 @@
 
 		<div class="search">
             <div class="search-container">
-                <form action="#" method="get">
+                <form action="/search">
                 <input type="text" placeholder="Search..." name="search">
                 </form>
             </div>
@@ -171,7 +171,7 @@
 					popup.style.display = "none";
 					overlay.style.display = "none";
 				});
-				}, 500); // tampilkan popup setelah delay 5 detik
+				}, 500); // tampilkan popup setelah delay 0,5 detik
 			}
 		</script>
 
