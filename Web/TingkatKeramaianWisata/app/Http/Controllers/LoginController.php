@@ -22,38 +22,31 @@ class LoginController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-    
+
         $credentials = $request->only('email', 'password');
     
+        // Login berhasil, redirect ke halaman dashboard
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-    
+
             // Validasi apakah petugas memiliki id_tempat_wisata yang terdaftar pada tabel tempat_wisata
             $tempatWisata = DB::table('tempat_wisata')
                 ->where('id_tempat', '=', $user->id_tempat_wisata)
                 ->first();
-    
+
             if ($tempatWisata) {
-                // Jika berhasil login, kirimkan URL halaman tempat wisata yang terkait sebagai response
-                return response()->json([
-                    'status' => 'success',
-                    'url' => route('petugas.show', ['id_tempat' => $user->id_tempat_wisata]),
-                ]);
+                // Jika berhasil login, redirect ke halaman tempat wisata yang terkait
+                return redirect()->route('petugas.show', ['id_tempat' => $user->id_tempat_wisata]);
             } else {
-                // Jika id_tempat_wisata yang terkait tidak terdaftar pada tabel tempat_wisata, logout petugas dan kirimkan pesan error sebagai response
+                // Jika id_tempat_wisata yang terkait tidak terdaftar pada tabel tempat_wisata, logout petugas dan redirect ke halaman login dengan pesan error
                 Auth::logout();
-                return response()->json([
-                    'status' => 'error',
-                    'message' => 'Anda tidak memiliki akses ke halaman tersebut',
-                ]);
+                return redirect()->back()->withErrors(['email' => 'Anda tidak memiliki akses ke halaman tersebut']);
             }
         } else {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Username atau password salah',
-            ]);
+            // Login gagal, redirect ke halaman login dengan pesan kesalahan
+            return redirect()->back()->withErrors(['email' => 'Email atau password salah']);
         }
-    }    
+    }
 
     // Proses logout
     public function logout()
