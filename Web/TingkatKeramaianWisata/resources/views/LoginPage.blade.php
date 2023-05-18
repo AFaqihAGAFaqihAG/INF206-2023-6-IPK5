@@ -9,23 +9,33 @@
 </head>
 <body>
     <div class="bg">
-     <div class="login_layout">
-          <div class="login">
-          <form action="{{ route('login') }}" method="post" id="login-form">
-              @csrf <!-- Menambahkan token CSRF di dalam form -->
-            <div class="login-teks">Masukan EMAIL & Password</div>
-            <div class="input_data">
-              <input class="input_id" type="email" name="email" placeholder="EMAIL">
-              <input class="input_pass" type="password" name="password" placeholder="PASSWORD">
-            <div class="button">
-                <button class="btn_submit" type="button" onclick="window.location.href='/'">Kembali</button>
-                <button class="btn_submit" type="submit" id="submit-btn">Login</button>
-              </div>
-              <p>Belum punya akun? <a href="daftar">Sign Up</a></p>
-              </form>
+        <div class="login_layout">
+            <div class="login">
+                @if (session('success'))
+                    <div class="alert-daftar">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if ($errors->has('email'))
+                    <div class="alert-login">
+                        {{ $errors->first('email') }}
+                    </div>
+                @endif
+                <form action="{{ route('login') }}" method="post" id="login-form">
+                @csrf <!-- Menambahkan token CSRF di dalam form -->
+                <div class="login-teks">Masukan EMAIL & Password</div>
+                <div class="input_data">
+                <input class="input_id" type="email" name="email" placeholder="EMAIL">
+                <input class="input_pass" type="password" name="password" placeholder="PASSWORD">
+                <div class="button">
+                    <button class="btn_submit" type="button" onclick="window.location.href='/'">Kembali</button>
+                    <button class="btn_submit" type="submit">Login</button>
+                </div>
+                <p>Belum punya akun? <a href="daftar">Sign Up</a></p>
+                </form>
             </div>
-          </div>
         </div>
+
 
         <div class="overlay"></div>
 

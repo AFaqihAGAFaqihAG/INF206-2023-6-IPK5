@@ -115,3 +115,25 @@ button{
     margin-top: 5px;
   }
   
+  .alert-daftar {
+    padding: 20px;
+    background-color: rgb(9, 222, 90);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  .alert-login {
+    padding: 20px;
+    background-color: #ff5959;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  
+  

@@ -137,25 +137,36 @@
 		</div>
 
 		<script>
-			// Ambil waktu tutup tempat wisata dari variabel PHP
-			var jamTutup = "{{ $tempatWisata->jam_tutup }}";
-			// Ambil waktu saat ini
-			var waktuSekarang = new Date();
-			// Ambil jam saat ini
-			var jamSekarang = waktuSekarang.getHours();
+			function checkOpenCloseTime(openTime, closeTime) {
+				const currentTime = new Date();
+				const currentHour = currentTime.getHours();
+				const openTimeArray = openTime.split(":");
+				const openHour = parseInt(openTimeArray[0]);
+				const openMinute = parseInt(openTimeArray[1]);
+				const openSecond = parseInt(openTimeArray[2]);
+				const closeTimeArray = closeTime.split(":");
+				const closeHour = parseInt(closeTimeArray[0]);
+				const closeMinute = parseInt(closeTimeArray[1]);
+				const closeSecond = parseInt(closeTimeArray[2]);
 
-			// Konversi format waktu tutup menjadi jam dalam format 24 jam
-			var jamTutupArray = jamTutup.split(":");
-			var jamTutup24 = parseInt(jamTutupArray[0]);
-			// Jika format waktu tutup adalah PM, tambahkan 12 jam
-			if (jamTutupArray[1].indexOf("PM") !== -1) {
-				jamTutup24 += 12;
+				if (currentHour < openHour || (currentHour === openHour && currentTime.getMinutes() <= openMinute && currentTime.getSeconds() <= openSecond)) {
+					return true;
+				}
+				else if (currentHour > closeHour || (currentHour === closeHour && currentTime.getMinutes() > closeMinute) || (currentHour === closeHour && currentTime.getMinutes() === closeMinute && currentTime.getSeconds() > closeSecond)) {
+					return true;
+				}
+
+				return false;
 			}
 
-			// Tampilkan pop-up alert jika waktu saat ini lebih besar atau sama dengan waktu tutup
-			if (jamSekarang >= jamTutup24) {
-				// jika waktu saat ini berada dalam rentang waktu yang ditentukan,
-				// tampilkan popup selama 10 detik setelah delay sebelum muncul
+			// Ambil waktu tutup dan buka tempat wisata dari variabel PHP
+			const jamTutup = "{{ $tempatWisata->jam_tutup }}";
+			const jamBuka = "{{ $tempatWisata->jam_buka }}";
+
+			// Cek untuk memutuskan menampilkan popup atau tidak
+			if (checkOpenCloseTime(jamBuka, jamTutup)) {
+				// jika waktu saat ini berada diluar rentang waktu yang ditentukan,
+				// tampilkan popup selama 10 detik setelah delay 
 				const popup = document.querySelector(".popup");
 				const overlay = document.querySelector(".overlay");
 				const closeButton = document.querySelector(".close-button");
@@ -173,10 +184,7 @@
 				});
 				}, 500); // tampilkan popup setelah delay 0,5 detik
 			}
-		</script>
-
-		
-		
+			</script>
 
 
 	</div>
